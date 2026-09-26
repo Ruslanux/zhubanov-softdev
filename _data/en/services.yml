@@ -1,0 +1,176 @@
+- id: custom
+  icon: code
+  short: "Custom software"
+  title: "Custom software development"
+  summary: "Web services, SaaS, portals and user dashboards, backend systems and APIs — from MVP to high-load product."
+  text: >-
+    We design and build web platforms and backend systems around your processes: with a clear domain model,
+    access control, background jobs and automated tests. Our core stack is Ruby on Rails 8 and PostgreSQL.
+  points:
+    - "Web platforms, SaaS and portals with dashboards for different roles"
+    - "Backend systems, REST/JSON APIs and integration gateways"
+    - "Multilingual interfaces (Kazakh, Russian, English), mobile-first and PWA"
+    - "Real-time: chats, notifications and live dashboards over WebSocket"
+    - "Payments, subscriptions, billing and marketplaces"
+    - "Administration, roles and permissions, audit logs"
+  deliverables:
+    - "Source code and the rights to it"
+    - "Architecture and API documentation"
+    - "Automated tests and a configured CI"
+    - "The application deployed on your servers or in the cloud"
+  projects: [edu-center, marketplace, family-platform, mutual-aid]
+
+- id: ai
+  icon: ai
+  short: "Applied AI and LLMs"
+  title: "Applied artificial intelligence and LLM agents"
+  summary: "Agent pipelines, AI assistants, document data extraction and content generation — with quality and cost control."
+  text: >-
+    We embed large language models where they deliver measurable value. The model reads and classifies, while code
+    computes the numbers, rules and verdicts — so results are reproducible, traceable and verifiable.
+  points:
+    - "Multi-agent systems: a coordinator and specialized agents"
+    - "In-product AI assistants that call your system's functions and respect permissions"
+    - "Fact extraction from PDFs, scans and spreadsheets, including vision models"
+    - "Strict JSON Schema output contracts, self-audit and tracing"
+    - "Quality evaluation: control sets, precision and recall"
+    - "Caching, token budgets and model choice: Claude, DeepSeek, Kimi"
+    - "Claude Code, Claude Agent SDK and MCP: agents that work with your code, data and tools"
+  deliverables:
+    - "A working pipeline or a module inside your system"
+    - "A control set and a test report"
+    - "A description of the method and its limits"
+    - "An estimate of operating costs"
+  projects: [hr-agents, covenant-agent, ops-assistants, qa-agent, requirements-graph]
+
+- id: automation
+  icon: flow
+  short: "Integrations and automation"
+  title: "Integrations and business-process automation"
+  summary: "We connect accounting systems, payments, e-signatures and messengers — and remove manual data entry and duplicate work."
+  text: >-
+    We automate routine operations and connect disparate systems into a single process — with an exchange log,
+    automatic retries and clear statuses for employees.
+  points:
+    - "Integrations with 1C, CRM, ERP and in-house systems"
+    - "Kaspi, Halyk Epay and Freedom payment gateways with idempotent webhook handling"
+    - "Electronic document workflows and digital signatures"
+    - "Notifications: email, web push, Slack, Microsoft Teams"
+    - "Background and scheduled jobs: reports, reconciliations, mailings"
+    - "CI/CD integrations: GitHub Actions, GitLab CI, Azure DevOps"
+  deliverables:
+    - "Integration contract specifications"
+    - "An exchange log and error monitoring"
+    - "Recovery procedures"
+    - "Instructions for staff"
+  projects: [reconciliation, marketplace, qa-agent]
+
+- id: vision
+  icon: scan
+  short: "Data and computer vision"
+  title: "Data processing and computer vision"
+  summary: "License plate recognition, OCR, parsing of estimates and BIM models, analytics and reporting."
+  text: >-
+    We turn video, photos, scans, spreadsheets and engineering models into structured data you can work with.
+    Models run on ordinary CPUs — no cloud and no expensive hardware required.
+  points:
+    - "Object and text recognition in video, including at night on ordinary IP cameras"
+    - "OCR for documents and equipment tags, validated against reference data"
+    - "BIM (IFC): model checks, quantity linking, 3D viewing"
+    - "Parsing of estimates, completion certificates and registers from XLSX and PDF"
+    - "CPU models without the cloud: ONNX Runtime, OpenCV"
+    - "Dashboards, analytics, Excel exports and PDF reports"
+  deliverables:
+    - "A model or a processing pipeline"
+    - "Metrics on a control set"
+    - "An API for integration"
+    - "A Docker image for deployment"
+  projects: [night-anpr, bim-standards, bim-volumes, instrumentation]
+
+- id: realtime
+  icon: map
+  short: "GIS and real-time"
+  title: "Geographic information systems and real-time systems"
+  summary: "24/7 monitoring and control of distributed sites, offline maps, triangulation and operator workstations."
+  text: >-
+    We build systems that run around the clock and do not depend on the internet: monitoring centers,
+    agents on remote nodes, maps in a closed network and operator workstations.
+  points:
+    - "Monitoring and control centers for networks of remote systems and sensors"
+    - "Offline GIS: a local map server, zones and tracks"
+    - "Node agents with buffering and an autonomous mode when the link is lost"
+    - "Multi-window operator workstations with color and audio alerts"
+    - "Incident logs, event playback and reports"
+    - "24/7 operation, self-recovery and role-based access"
+  deliverables:
+    - "Server and agents for Windows and Linux"
+    - "Installers: Windows service, systemd, Docker"
+    - "Administrator and operator guides"
+    - "Interface protocol and API documentation"
+  projects: [counter-uav, night-anpr]
+
+- id: discovery
+  icon: layers
+  short: "Concepts and prototypes"
+  title: "Discovery, concepts and prototypes"
+  summary: "We analyze the specification, design the architecture and show the solution in a prototype before development starts."
+  text: >-
+    We reduce risk before the main budget is spent: we define the method and acceptance criteria, design the
+    architecture and demonstrate the solution with a clickable prototype or a working MVP.
+  points:
+    - "Process discovery and specification analysis"
+    - "Solution concept: scenarios, architecture, access matrix, security"
+    - "Clickable UI prototypes and working MVPs"
+    - "Method, acceptance criteria and test protocol"
+    - "Presentations and materials for project defense and tenders"
+    - "Timeline, cost estimate and roadmap"
+  deliverables:
+    - "Concept and architecture diagrams"
+    - "A prototype that opens in the browser"
+    - "An acceptance presentation"
+    - "An estimate and a roadmap"
+  projects: [access-management, payments-mor, bim-standards]
+
+- id: devops
+  icon: server
+  short: "Deployment and support"
+  title: "Deployment, DevOps and support"
+  summary: "We take systems to production and keep them running: containers, CI/CD, monitoring, backups and staff training."
+  text: >-
+    We bring the system into operation and stay close: we set up infrastructure, automate releases,
+    train administrators and users, and provide SLA-based support.
+  points:
+    - "Docker, Kamal 2, systemd; Hetzner, the cloud or the client's servers"
+    - "Operation in closed networks and without internet access"
+    - "CI/CD, automated checks and rollbacks"
+    - "TLS, Cloudflare, S3-compatible storage"
+    - "Monitoring, logs and backups"
+    - "Staff training and knowledge transfer"
+  deliverables:
+    - "Reproducible infrastructure configuration"
+    - "Deployment and recovery instructions"
+    - "SLA-based support"
+    - "Training for administrators and users"
+  projects: [instrumentation, counter-uav, code-school]
+
+- id: audit
+  icon: shield
+  short: "Audit and modernization"
+  title: "Code audit, security and modernization"
+  summary: "We review existing systems, close vulnerabilities, upgrade the stack and speed up the application."
+  text: >-
+    We take over legacy systems and make them manageable again: we find bottlenecks and vulnerabilities,
+    cover critical scenarios with tests and upgrade the stack without stopping the business.
+  points:
+    - "Code and architecture review with a prioritized list of findings"
+    - "Security analysis: Brakeman, dependency audits, access control"
+    - "Upgrades to current Ruby and Rails versions"
+    - "Test coverage for critical scenarios"
+    - "Database query and performance optimization"
+    - "Stack and architecture recommendations"
+  deliverables:
+    - "A findings report with a remediation plan"
+    - "Fixes as agreed"
+    - "Tests for critical scenarios"
+    - "Recommendations for further development"
+  projects: [stack-advisor, qa-agent]

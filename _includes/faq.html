@@ -1,0 +1,8 @@
+<div class="faq">
+  {%- for q in d.faq %}
+  <details{% if forloop.first %} open{% endif %}>
+    <summary>{{ q.q }} {% include icon.html name="chevron-down" px=20 %}</summary>
+    <p>{{ q.a }}</p>
+  </details>
+  {%- endfor %}
+</div>

@@ -1,0 +1,8 @@
+{%- unless page.no_alternates -%}
+<div class="lang-switch{% if include.class %} {{ include.class }}{% endif %}" role="group" aria-label="{{ t.lang.label }}">
+  {%- for l in site.languages %}
+  {%- if l == site.lang %}{% assign href = path %}{% else %}{% assign href = "/" | append: l | append: path %}{% endif %}
+  <a href="{{ href | relative_url }}" hreflang="{{ l }}" lang="{{ l }}" title="{{ site.data[l].ui.lang.name }}"{% if l == lang %} aria-current="true"{% endif %}>{{ site.data[l].ui.lang.short }}</a>
+  {%- endfor %}
+</div>
+{%- endunless -%}

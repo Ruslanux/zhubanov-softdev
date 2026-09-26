@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#070b14">
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.classList.add("js");
+    // Если main.js не загрузится, блоки с анимацией появления не должны остаться скрытыми.
+    setTimeout(function () { if (!window.__zsReady) root.classList.remove("js"); }, 2500);
+    try {
+      var saved = localStorage.getItem("theme");
+      if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
+    } catch (e) {}
+  })();
+</script>
+{% seo title=false %}
+<title>{% if page.title and page.layout != "home" %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ t.meta.tagline }}{% endif %}</title>
+{%- unless page.no_alternates %}
+{%- for l in site.languages %}
+  {%- if l == site.lang %}{% assign alt_url = path %}{% else %}{% assign alt_url = "/" | append: l | append: path %}{% endif %}
+<link rel="alternate" hreflang="{{ l }}" href="{{ alt_url | absolute_url }}">
+{%- endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ path | absolute_url }}">
+{%- endunless %}
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ '/assets/img/favicon-32.png' | relative_url }}" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{% include jsonld.html %}

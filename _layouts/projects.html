@@ -1,0 +1,50 @@
+---
+layout: default
+---
+{%- include vars.html -%}
+{%- assign projects = site.projects | where: "lang", lang | sort: "order" -%}
+
+<section class="page-hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="container">
+    <p class="eyebrow"><span class="dot"></span>{{ t.pages.projects.eyebrow }}</p>
+    <h1>{{ t.pages.projects.title }}</h1>
+    <p class="lead">{{ t.pages.projects.lead }}</p>
+  </div>
+</section>
+
+<section class="section" data-projects>
+  <div class="container">
+    <div class="filters">
+      <div class="filter-chips" role="group" aria-label="{{ t.pages.projects.filter_label }}">
+        <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">{{ t.pages.projects.filter_all }} <span class="n">{{ projects.size }}</span></button>
+        {%- for ind in d.industries %}
+        {%- assign n = projects | where_exp: "p", "p.industries contains ind.id" | size %}
+        {%- if n > 0 %}
+        <button class="filter-chip" type="button" data-filter="{{ ind.id }}" aria-pressed="false">{{ ind.short | default: ind.title }} <span class="n">{{ n }}</span></button>
+        {%- endif %}
+        {%- endfor %}
+      </div>
+      <label class="search">
+        <span class="visually-hidden">{{ t.pages.projects.search }}</span>
+        {% include icon.html name="search" px=18 %}
+        <input type="search" placeholder="{{ t.pages.projects.search }}" data-search autocomplete="off">
+      </label>
+    </div>
+    <p class="results-meta" data-results data-template="{{ t.pages.projects.results }}" aria-live="polite"></p>
+
+    <div class="grid grid-projects">
+      {%- for p in projects %}
+      {% include project-card.html project=p filterable=true %}
+      {%- endfor %}
+    </div>
+    <p class="empty-state" data-empty hidden>{{ t.pages.projects.empty }}</p>
+
+    <div class="note">
+      {% include icon.html name="lock" px=20 %}
+      <p>{{ t.pages.projects.nda }}</p>
+    </div>
+  </div>
+</section>
+
+{% include cta.html %}

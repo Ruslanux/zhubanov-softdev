@@ -1,0 +1,42 @@
+{%- assign home_url = lp | append: "/" -%}
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="logo" href="{{ home_url | relative_url }}" aria-label="{{ site.title }}">{% include logo.html %}</a>
+
+    <nav class="site-nav" id="site-nav" aria-label="{{ t.nav.label }}" data-nav>
+      <ul class="nav-list">
+        {%- for item in t.nav.items %}
+        {%- assign href = lp | append: item.url %}
+        <li><a href="{{ href | relative_url }}"{% if path contains item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+        {%- endfor %}
+      </ul>
+      <div class="nav-mobile-extra">
+        {% include lang-switch.html class="lang-switch-mobile" %}
+        {%- assign contact_url = lp | append: "/contact/" %}
+        <a class="btn btn-primary btn-block" href="{{ contact_url | relative_url }}">{{ t.cta.discuss }} {% include icon.html name="arrow-right" px=18 %}</a>
+        {%- if site.contact.email != "" %}
+        <a class="nav-contact" href="mailto:{{ site.contact.email }}">{% include icon.html name="mail" px=18 %} {{ site.contact.email }}</a>
+        {%- endif %}
+        {%- if site.contact.phone != "" %}
+        <a class="nav-contact" href="tel:+{{ site.contact.phone | remove: '+' | remove: ' ' }}">{% include icon.html name="phone" px=18 %} {{ site.contact.phone | replace: ' ', '&nbsp;' }}</a>
+        {%- endif %}
+        {%- if site.contact.telegram != "" %}
+        <a class="nav-contact" href="https://t.me/{{ site.contact.telegram }}" target="_blank" rel="noopener">{% include icon.html name="telegram" px=18 %} @{{ site.contact.telegram }}</a>
+        {%- endif %}
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      {% include lang-switch.html class="lang-switch-header" %}
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="{{ t.theme.toggle }}" title="{{ t.theme.toggle }}">
+        {% include icon.html name="sun" class="icon-sun" px=20 %}
+        {% include icon.html name="moon" class="icon-moon" px=20 %}
+      </button>
+      <a class="btn btn-primary btn-sm header-cta" href="{{ contact_url | relative_url }}">{{ t.cta.discuss }}</a>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-controls="site-nav" aria-expanded="false" aria-label="{{ t.nav.open }}" data-label-open="{{ t.nav.open }}" data-label-close="{{ t.nav.close }}">
+        {% include icon.html name="menu" class="icon-menu" %}
+        {% include icon.html name="close" class="icon-close" %}
+      </button>
+    </div>
+  </div>
+</header>

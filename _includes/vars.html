@@ -1,0 +1,18 @@
+{%- comment -%}
+  Общие переменные страницы. Include в Jekyll не изолирован, поэтому
+  всё, что присвоено здесь, видно в вызвавшем шаблоне.
+    lang — язык страницы, t — строки интерфейса, d — данные языка,
+    lp — префикс URL языка ("" для языка по умолчанию), path — URL без префикса.
+{%- endcomment -%}
+{%- assign lang = page.lang | default: site.lang -%}
+{%- assign d = site.data[lang] -%}
+{%- assign t = d.ui -%}
+{%- if lang == site.lang -%}
+  {%- assign lp = "" -%}
+  {%- assign path = page.url -%}
+{%- else -%}
+  {%- assign lp = "/" | append: lang -%}
+  {%- assign path = page.url | remove_first: lp -%}
+{%- endif -%}
+{%- if path == "" -%}{%- assign path = "/" -%}{%- endif -%}
+{%- assign path = path | replace: "index.html", "" -%}

@@ -1,0 +1,40 @@
+# Технологии не переводятся — подписи групп лежат в _data/<язык>/ui.yml (stack_groups).
+# Собрано из Gemfile / requirements.txt / go.mod / package.json проектов портфолио
+# и базы знаний советника по архитектуре Rails. Первые три пункта группы core
+# выводятся первой строкой — основа стека.
+- id: core
+  icon: code
+  items: ["Ruby on Rails 8", "Python", "Go", "Ruby", "TypeScript", "JavaScript", "Node.js", "FastAPI", "Pydantic", "Uvicorn", "Jinja2", "Jekyll"]
+- id: llm
+  icon: ai
+  items: ["Claude API", "Anthropic SDK", "Claude Agent SDK", "Claude Code", "MCP", "Tool use", "Structured outputs", "Prompt caching", "Batches API", "RubyLLM", "DeepSeek", "Kimi"]
+- id: ml
+  icon: scan
+  items: ["PyTorch", "ONNX", "ONNX Runtime", "NumPy", "OpenCV", "YOLO", "CRNN · CTC", "Pillow", "Tesseract.js", "pgvector"]
+- id: rails
+  icon: gem
+  items: ["Hotwire", "Turbo", "Stimulus", "Importmap", "Propshaft", "Vite Ruby", "Phlex", "ViewComponent", "Devise", "OmniAuth", "Authentication Zero", "Rodauth", "JWT", "Pundit", "CanCanCan", "Action Policy", "AASM", "Pagy", "Kaminari", "Ransack", "Jbuilder", "money-rails", "Draper", "Interactor", "dry-validation", "Rack::Attack"]
+- id: frontend
+  icon: layout
+  items: ["React", "Inertia.js", "Vite", "Tailwind CSS", "Headless UI", "Framer Motion", "Recharts", "Chartkick", "React Hook Form", "Zod", "htmx", "CodeMirror", "PWA", "Service Worker", "Web Push"]
+- id: data
+  icon: server
+  items: ["PostgreSQL", "SQLite", "JSONB", "pg_search", "pgvector", "Meilisearch", "Redis", "Active Storage", "S3", "Cloudflare R2", "MinIO"]
+- id: realtime
+  icon: zap
+  items: ["Solid Queue", "Solid Cache", "Solid Cable", "Action Cable", "Turbo Streams", "WebSocket", "Sidekiq", "GoodJob", "Mission Control"]
+- id: docs
+  icon: doc
+  items: ["PyMuPDF", "pdf-reader", "python-docx", "docx", "openpyxl", "Roo", "caxlsx", "Excelize", "Prawn", "go-pdf", "Redcarpet", "CSV"]
+- id: geo
+  icon: map
+  items: ["MapLibre GL", "PMTiles", "MBTiles", "three.js", "IfcOpenShell", "IFC4", "BCF 2.1", "Cytoscape.js"]
+- id: integrations
+  icon: flow
+  items: ["Kaspi", "Halyk Epay", "Freedom Pay", "CloudPayments", "1С", "PKI / X.509", "Google OAuth", "Sign in with Apple", "Google Calendar API", "Slack", "Microsoft Teams", "Docuseal", "Resend", "Faraday"]
+- id: quality
+  icon: check-circle
+  items: ["RSpec", "Minitest", "FactoryBot", "Capybara", "Selenium", "Playwright", "pytest", "Vitest", "WebMock", "VCR", "SimpleCov", "RuboCop", "Brakeman", "bundler-audit", "Bullet", "ESLint", "ShellCheck", "bats"]
+- id: devops
+  icon: rocket
+  items: ["Docker", "Kamal 2", "Thruster", "Puma", "GitHub Actions", "GitLab CI", "Azure DevOps", "Hetzner", "Cloudflare", "systemd", "Windows Service", "Sentry", "Lograge", "rack-mini-profiler", "GitHub Pages"]

@@ -1,0 +1,78 @@
+# ---------------------------------------------------------------
+# Zhubanov SoftDev — Jekyll / GitHub Pages
+# ---------------------------------------------------------------
+title: "Zhubanov SoftDev"
+legal_name: "ИП Жубанов Р. Ж."
+description: >-
+  Разработка программного обеспечения на заказ и внедрение прикладного
+  искусственного интеллекта: веб-сервисы, интеграции, LLM-агенты,
+  компьютерное зрение, ГИС и системы реального времени.
+
+# Язык по умолчанию живёт в корне сайта, остальные — в /kk/ и /en/.
+lang: ru
+languages: [kk, ru, en]
+
+# Project page (github.com/<login>/zhubanov-softdev):
+#   url: "https://ruslanux.github.io", baseurl: "/zhubanov-softdev"
+# Свой домен (например zhubanov-softdev.kz) или user/organization page:
+#   url: "https://zhubanov-softdev.kz", baseurl: "" и файл CNAME в корне.
+url: "https://ruslanux.github.io"
+baseurl: "/zhubanov-softdev"
+
+logo: /assets/img/logo-512.png
+image: /assets/img/og.png
+author: "Zhubanov SoftDev"
+
+# Контакты. Пустое значение — блок на сайте не выводится.
+contact:
+  email: "zhubanov1090@gmail.com"
+  phone: "+7 777 419 7502"
+  whatsapp: "77774197502"   # номер без «+», для ссылки wa.me
+  telegram: "Ruslanux"      # имя пользователя без «@» → https://t.me/Ruslanux
+  linkedin: "https://www.linkedin.com/in/ruslan-zhubanov-1367b893"
+  github: ""                # репозитории раскрывают названия проектов — по умолчанию не выводим
+
+# Реквизиты. Пустое значение — строка в подвале не выводится.
+legal:
+  iin: ""
+
+# Отправка формы брифа. Пусто — форма открывает почтовый клиент с готовым письмом.
+# Можно указать endpoint Formspree / Getform (принимает POST с Accept: application/json).
+forms:
+  endpoint: ""
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  projects:
+    output: true
+
+sass:
+  style: compressed
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: "default", lang: "ru", image: "/assets/img/og.png" }
+  - scope: { path: "kk" }
+    values: { lang: "kk" }
+  - scope: { path: "en" }
+    values: { lang: "en" }
+  - scope: { path: "", type: "projects" }
+    values: { layout: "project" }
+  - scope: { path: "_projects/ru" }
+    values: { lang: "ru", permalink: "/projects/:name/" }
+  - scope: { path: "_projects/kk" }
+    values: { lang: "kk", permalink: "/kk/projects/:name/" }
+  - scope: { path: "_projects/en" }
+    values: { lang: "en", permalink: "/en/projects/:name/" }
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - script
+  - .github
+  - .jekyll-cache

@@ -1,0 +1,148 @@
+---
+layout: default
+---
+{%- include vars.html -%}
+{%- assign c = t.pages.contact -%}
+{%- assign f = c.form -%}
+
+<section class="page-hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="container">
+    <p class="eyebrow"><span class="dot"></span>{{ c.eyebrow }}</p>
+    <h1>{{ c.title }}</h1>
+    <p class="lead">{{ c.lead }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-layout">
+    <form class="card form-card" data-brief-form
+          data-email="{{ site.contact.email }}"
+          data-endpoint="{{ site.forms.endpoint }}"
+          data-subject="{{ f.subject }}"
+          data-msg-ok="{{ f.msg_ok }}"
+          data-msg-err="{{ f.msg_err }}"
+          data-msg-mail="{{ f.msg_mail }}"
+          {% if site.forms.endpoint != "" %}action="{{ site.forms.endpoint }}" method="post"{% else %}action="mailto:{{ site.contact.email }}" method="post" enctype="text/plain"{% endif %}>
+      <h2>{{ f.title }}</h2>
+      <p class="muted">{{ f.lead }}</p>
+      <div class="form-grid">
+        <div class="field">
+          <label for="f-name">{{ f.name }} <span class="req">*</span></label>
+          <input id="f-name" name="name" type="text" required autocomplete="name" data-label="{{ f.name }}">
+        </div>
+        <div class="field">
+          <label for="f-company">{{ f.company }}</label>
+          <input id="f-company" name="company" type="text" autocomplete="organization" data-label="{{ f.company }}">
+        </div>
+        <div class="field">
+          <label for="f-email">{{ f.email }} <span class="req">*</span></label>
+          <input id="f-email" name="email" type="email" required autocomplete="email" data-label="{{ f.email }}">
+        </div>
+        <div class="field">
+          <label for="f-phone">{{ f.phone }}</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+7" data-label="{{ f.phone }}">
+        </div>
+        <div class="field">
+          <label for="f-industry">{{ f.industry }}</label>
+          <select id="f-industry" name="industry" data-label="{{ f.industry }}">
+            <option value="">{{ f.choose }}</option>
+            {%- for ind in d.industries %}
+            <option>{{ ind.title }}</option>
+            {%- endfor %}
+            <option>{{ f.other }}</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-timeline">{{ f.timeline }}</label>
+          <select id="f-timeline" name="timeline" data-label="{{ f.timeline }}">
+            <option value="">{{ f.choose }}</option>
+            {%- for x in f.timelines %}
+            <option>{{ x }}</option>
+            {%- endfor %}
+          </select>
+        </div>
+        <fieldset class="field full">
+          <legend>{{ f.services }}</legend>
+          <div class="pill-options">
+            {%- for s in d.services %}
+            <label><input type="checkbox" name="services[]" value="{{ s.short }}" data-label="{{ f.services }}"><span>{{ s.short }}</span></label>
+            {%- endfor %}
+          </div>
+        </fieldset>
+        <div class="field full">
+          <label for="f-message">{{ f.message }} <span class="req">*</span></label>
+          <textarea id="f-message" name="message" required placeholder="{{ f.message_ph }}" data-label="{{ f.message }}"></textarea>
+        </div>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
+      </div>
+      <div class="form-foot">
+        <small>{% if site.forms.endpoint != "" %}{{ f.note_endpoint }}{% else %}{{ f.note_mail }}{% endif %}</small>
+        <button class="btn btn-primary btn-lg" type="submit">{{ f.submit }} {% include icon.html name="arrow-right" px=18 %}</button>
+      </div>
+      <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+    </form>
+
+    <div class="contact-cards">
+      {%- if site.contact.email != "" %}
+      <div class="card contact-card">
+        <span class="card-icon">{% include icon.html name="mail" px=20 %}</span>
+        <div>
+          <h3>{{ c.email }}</h3>
+          <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
+          <p>{{ c.email_note }}</p>
+        </div>
+        <button class="icon-btn copy-btn" type="button" data-copy="{{ site.contact.email }}" aria-label="{{ c.copy }}" data-copied="{{ c.copied }}">{% include icon.html name="copy" px=16 %}</button>
+      </div>
+      {%- endif %}
+      {%- if site.contact.phone != "" %}
+      <div class="card contact-card">
+        <span class="card-icon">{% include icon.html name="phone" px=20 %}</span>
+        <div>
+          <h3>{{ c.phone }}</h3>
+          <a href="tel:+{{ site.contact.phone | remove: '+' | remove: ' ' }}">{{ site.contact.phone | replace: ' ', '&nbsp;' }}</a>
+          <p>{{ c.phone_note }}</p>
+        </div>
+        <button class="icon-btn copy-btn" type="button" data-copy="{{ site.contact.phone }}" aria-label="{{ c.copy }}" data-copied="{{ c.copied }}">{% include icon.html name="copy" px=16 %}</button>
+      </div>
+      {%- endif %}
+      {%- if site.contact.whatsapp != "" %}
+      <a class="card contact-card" href="https://wa.me/{{ site.contact.whatsapp }}?text={{ t.contact.wa_text | uri_escape }}" target="_blank" rel="noopener">
+        <span class="card-icon gold">{% include icon.html name="whatsapp" px=20 %}</span>
+        <div>
+          <h3>WhatsApp</h3>
+          <span class="value">{{ c.whatsapp }}</span>
+          <p>{{ c.whatsapp_note }}</p>
+        </div>
+      </a>
+      {%- endif %}
+      {%- if site.contact.telegram != "" %}
+      <a class="card contact-card" href="https://t.me/{{ site.contact.telegram }}" target="_blank" rel="noopener">
+        <span class="card-icon">{% include icon.html name="telegram" px=20 %}</span>
+        <div>
+          <h3>Telegram</h3>
+          <span class="value">@{{ site.contact.telegram }}</span>
+        </div>
+      </a>
+      {%- endif %}
+      <div class="card contact-card">
+        <span class="card-icon">{% include icon.html name="pin" px=20 %}</span>
+        <div>
+          <h3>{{ c.location }}</h3>
+          <span class="value">{{ t.contact.city }}, {{ t.contact.country }}</span>
+          <p>{{ c.location_note }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="dot"></span>FAQ</p>
+      <h2>{{ c.faq_title }}</h2>
+    </header>
+    {% include faq.html %}
+  </div>
+</section>

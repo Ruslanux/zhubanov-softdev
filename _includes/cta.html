@@ -1,0 +1,20 @@
+{%- assign contact_url = lp | append: "/contact/" -%}
+<section class="section">
+  <div class="container">
+    <div class="cta" data-reveal>
+      <div>
+        <h2>{{ include.title | default: t.cta_band.title }}</h2>
+        <p>{{ include.text | default: t.cta_band.text }}</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary btn-lg" href="{{ contact_url | relative_url }}">{{ t.cta.discuss }} {% include icon.html name="arrow-right" px=18 %}</a>
+        {%- if site.contact.whatsapp != "" %}
+        <a class="btn btn-ghost btn-lg" href="https://wa.me/{{ site.contact.whatsapp }}?text={{ t.contact.wa_text | uri_escape }}" target="_blank" rel="noopener">{% include icon.html name="whatsapp" px=18 %} WhatsApp</a>
+        {%- endif %}
+        {%- if site.contact.telegram != "" %}
+        <a class="btn btn-ghost btn-lg" href="https://t.me/{{ site.contact.telegram }}" target="_blank" rel="noopener">{% include icon.html name="telegram" px=18 %} Telegram</a>
+        {%- endif %}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+- q: "How much does a project cost and how long does it take?"
+  a: >-
+    It depends on the scope. A prototype or MVP takes from a few weeks; a full platform from two to three months.
+    After discovery we provide an estimate with stages and acceptance points.
+- q: "How is the engagement formalized?"
+  a: >-
+    A contract with Sole Proprietor Zhubanov R. Zh., a specification, a schedule and stage completion certificates.
+    We work with companies in Kazakhstan and abroad.
+- q: "Who owns the source code and the rights?"
+  a: >-
+    The client, once paid, unless the contract states otherwise. We hand over the source code, documentation
+    and infrastructure access.
+- q: "How do you ensure data confidentiality?"
+  a: >-
+    We sign an NDA and can deploy the solution on your servers and in a closed network.
+    For prototypes we use synthetic or anonymized data.
+- q: "Which AI models and tools do you use?"
+  a: >-
+    Our main tool is Claude by Anthropic. In products we use the Claude API through the official SDKs (Ruby, Python, TypeScript): tool use, structured outputs against a JSON Schema, reading scans and PDFs, prompt caching and the Batches API to cut costs. We build agents on the Claude Agent SDK and connect them to your systems through MCP servers. In development itself we use Claude Code — in the terminal (CLI), in the IDE and in headless mode inside CI/CD: it speeds up delivery while the code goes through the same tests and reviews. When price or running on your own servers matters, we use DeepSeek and Kimi, and on ordinary CPUs — compact in-house models in ONNX. The model can be swapped without rewriting the system.
+- q: "Do you solve technology challenges for large companies and take part in tenders?"
+  a: >-
+    Yes. We prepare concepts, prototypes, presentations and commercial proposals against client specifications —
+    with a method, a test report and traceability to the requirements.
+- q: "What happens after launch?"
+  a: "A warranty period, SLA-based support, product evolution and staff training."

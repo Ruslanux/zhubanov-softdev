@@ -1,0 +1,18 @@
+<div class="pipeline" data-reveal>
+  {%- for n in t.approach.pipeline %}
+  <div class="pipeline-node">
+    <span class="step-tag tag-{{ n.kind }}">{{ n.tag }}</span>
+    <h3>{{ n.title }}</h3>
+    <p>{{ n.text }}</p>
+  </div>
+  {%- endfor %}
+</div>
+<div class="grid grid-3">
+  {%- for p in d.principles %}
+  <div class="card principle" data-reveal>
+    <span class="card-icon{% if forloop.index0 == 1 or forloop.index0 == 4 %} gold{% endif %}">{% include icon.html name=p.icon px=22 %}</span>
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.text }}</p>
+  </div>
+  {%- endfor %}
+</div>

@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{%- include vars.html -%}
+{%- assign projects = site.projects | where: "lang", lang | sort: "order" -%}
+{%- assign projects_url = lp | append: "/projects/" -%}
+
+<section class="page-hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="container">
+    <p class="eyebrow"><span class="dot"></span>{{ t.pages.industries.eyebrow }}</p>
+    <h1>{{ t.pages.industries.title }}</h1>
+    <p class="lead">{{ t.pages.industries.lead }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid grid-2">
+    {%- for ind in d.industries %}
+    {%- assign related = projects | where_exp: "p", "p.industries contains ind.id" %}
+    <article class="card industry-card" id="{{ ind.id }}" data-reveal>
+      <div class="card-head">
+        <span class="card-icon">{% include icon.html name=ind.icon %}</span>
+        <div>
+          <small>{{ ind.tag }}</small>
+          <h2>{{ ind.title }}</h2>
+        </div>
+      </div>
+      <p>{{ ind.text }}</p>
+      <ul class="check-list">
+        {%- for c in ind.capabilities %}<li>{{ c }}</li>{% endfor %}
+      </ul>
+      <div class="industry-cases">
+        {%- if related.size > 0 %}
+        <h3>{{ t.pages.industries.cases }}</h3>
+        <ul>
+          {%- for p in related %}
+          <li><a href="{{ p.url | relative_url }}">{% include icon.html name="arrow-right" px=16 %}<span>{{ p.title | escape }}</span></a></li>
+          {%- endfor %}
+        </ul>
+        {%- else %}
+        <h3>{{ t.pages.industries.no_cases_title }}</h3>
+        <p class="muted">{{ t.pages.industries.no_cases }}</p>
+        {%- endif %}
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+{% include cta.html %}

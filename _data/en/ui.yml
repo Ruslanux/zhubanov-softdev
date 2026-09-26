@@ -1,0 +1,304 @@
+meta:
+  tagline: "Custom software and applied AI"
+  org_description: >-
+    Custom software development and applied artificial intelligence: web services and backend systems,
+    integrations and business-process automation, LLMs and agent pipelines, data processing and computer vision,
+    GIS and real-time systems.
+
+lang:
+  short: "Eng"
+  name: "English"
+  label: "Site language"
+
+a11y:
+  skip: "Skip to content"
+
+theme:
+  toggle: "Toggle color theme"
+
+nav:
+  label: "Main navigation"
+  open: "Open menu"
+  close: "Close menu"
+  items:
+    - { title: "Services", url: "/services/" }
+    - { title: "Industries", url: "/industries/" }
+    - { title: "Projects", url: "/projects/" }
+    - { title: "About", url: "/about/" }
+    - { title: "Contact", url: "/contact/" }
+
+labels:
+  home: "Home"
+  projects_count: "Projects"
+
+cta:
+  discuss: "Discuss a project"
+  projects: "View projects"
+  all_projects: "All projects"
+  all_services: "All services"
+  all_industries: "All industries"
+  case: "Read more"
+  similar: "Need something similar?"
+  similar_text: "Tell us about your challenge — we will propose an approach, timeline and scope."
+
+cta_band:
+  title: "Have a challenge? Let's talk"
+  text: >-
+    Describe the process you want to automate or the product you need to build.
+    We reply within one business day with questions and a proposed engagement format.
+
+hero:
+  eyebrow: "Custom software & applied AI · Kazakhstan"
+  title_html: 'Software and applied AI <span class="grad">that work for your business</span>'
+  lead: >-
+    We build web services and backend systems, integrations and automation, LLM and agent-pipeline
+    solutions, computer vision, GIS and real-time systems. Turnkey — from discovery to support.
+  tech_label: "Core technologies"
+  tech: ["Ruby on Rails", "Python", "Go", "TypeScript", "LLM · agents", "PostgreSQL"]
+  console:
+    aria: "Pipeline diagram: the model reads the data, code computes numbers and verdicts, an expert approves the result"
+    foot: "0 critical findings · trace saved"
+    steps:
+      - { code: "ingest", text: "Documents, scans, spreadsheets, models", tag: "PDF · XLSX · IFC", kind: "code" }
+      - { code: "classify", text: "The model reads and classifies", tag: "LLM", kind: "llm" }
+      - { code: "compute", text: "Code computes numbers and verdicts", tag: "engine", kind: "code" }
+      - { code: "verify", text: "Self-audit and source checks", tag: "audit", kind: "code" }
+      - { code: "approve", text: "An expert approves the result", tag: "human", kind: "human" }
+  badges:
+    - { value: "97.5%", label: "night-time license plate accuracy" }
+    - { value: "100%", label: "traceability to the source" }
+
+stats_label: "Company in numbers"
+stats:
+  - { key: "projects", suffix: "", label: "projects in the portfolio" }
+  - { key: "industries", suffix: "", label: "industries and domains" }
+  - { value: "2,500+", count: 2500, suffix: "+", label: "automated tests shipped" }
+  - { value: "5+", count: 5, suffix: "+", label: "years of commercial development" }
+
+home:
+  services:
+    eyebrow: "Services"
+    title: "The full development cycle — from idea to operation"
+    lead: "We own the outcome end to end: analysis, architecture, code, tests, deployment and support."
+  industries:
+    eyebrow: "Industries"
+    title: "We work across every area of digital transformation"
+    lead: "Education, retail, finance, construction, industry, security, government and more."
+  projects:
+    eyebrow: "Projects"
+    title: "Featured projects"
+    lead: "Production systems, prototypes and products. Client names are withheld under confidentiality terms."
+  process:
+    eyebrow: "How we work"
+    title: "Turnkey delivery in six clear stages"
+    lead: "Every stage ends with a measurable result you accept before we move on."
+  stack:
+    eyebrow: "Technology"
+    title: "A production-proven stack"
+    lead: "We pick technology to fit the problem, not the other way round. Our core is Ruby on Rails, Python and Go."
+
+approach:
+  eyebrow: "Approach"
+  title: "AI you can trust"
+  lead: >-
+    The model reads and classifies — deterministic code computes the numbers and decisions, and an expert approves
+    the result. That is why every number is reproducible and traceable to its source.
+  pipeline:
+    - { tag: "input", kind: "code", title: "Data", text: "Documents, scans, spreadsheets, BIM models, video streams, accounting systems." }
+    - { tag: "LLM", kind: "llm", title: "The model reads", text: "Extracts facts, classifies, turns requirements into strict schemas." }
+    - { tag: "engine", kind: "code", title: "Code computes", text: "Arithmetic, rules and verdicts live in a deterministic engine." }
+    - { tag: "human", kind: "human", title: "An expert approves", text: "Ambiguous cases go to a specialist; decisions are recorded." }
+    - { tag: "output", kind: "code", title: "Result", text: "A report, an API response or an action — traced back to the source document." }
+
+stack_groups:
+  core: "Languages and frameworks"
+  llm: "LLMs and agents"
+  ml: "ML and computer vision"
+  rails: "Rails ecosystem"
+  frontend: "Frontend and mobile"
+  data: "Databases and search"
+  realtime: "Queues and real time"
+  docs: "Documents and reports"
+  geo: "GIS, BIM and 3D"
+  integrations: "Integrations and payments"
+  quality: "Testing and quality"
+  devops: "DevOps and infrastructure"
+
+status:
+  live: "In production"
+  ready: "Ready to deploy"
+  pilot: "Prototype · pilot"
+  concept: "Concept"
+
+pages:
+  services:
+    eyebrow: "Services"
+    title: "What we do"
+    lead: >-
+      We develop custom software and implement applied artificial intelligence. We work with Ruby on Rails,
+      Python and Go and deliver turnkey projects, including documentation and staff training.
+    toc: "Service sections"
+    what: "What we do"
+    deliver: "What you get"
+    related: "Examples:"
+  industries:
+    eyebrow: "Industries"
+    title: "Solutions for every industry"
+    lead: >-
+      The technology is the same — the problems differ. We immerse ourselves in the client's domain and speak
+      the language of its processes, documents and regulations.
+    cases: "Projects in this industry"
+    no_cases_title: "Ready for your project"
+    no_cases: "We assemble typical solutions from proven building blocks: user portals, integrations, AI assistants and analytics."
+  projects:
+    eyebrow: "Portfolio"
+    title: "Projects"
+    lead: >-
+      Products in production, solutions to technology challenges set by large companies, prototypes and our own
+      products. Each case study covers the challenge, the solution and a measurable result.
+    filter_label: "Filter by industry"
+    filter_all: "All"
+    search: "Search projects and technologies"
+    results: "Showing {n} of {total} projects"
+    empty: "Nothing found. Try another query or reset the filter."
+    nda: >-
+      Client and project names are withheld under confidentiality terms. Details, demos and references
+      are available on request after signing an NDA.
+  project:
+    challenge: "Challenge"
+    solution: "Solution"
+    results: "Results"
+    details: "Details"
+    client: "Client"
+    industry: "Industry"
+    status: "Status"
+    deliverables: "Deliverables"
+    stack: "Technology"
+    related: "Related projects"
+    pager: "Project navigation"
+    prev: "Previous"
+    next: "Next"
+  about:
+    eyebrow: "About"
+    title: "Zhubanov SoftDev — a full-cycle engineering team"
+    lead: >-
+      We build custom software and implement applied artificial intelligence for businesses and the public sector
+      in Kazakhstan and abroad.
+    story:
+      - >-
+        Zhubanov SoftDev (Sole Proprietor Zhubanov R. Zh.) is a software development company. We build web services and
+        backend systems, integrations and business-process automation, solutions based on large language models and
+        agent pipelines, data processing, computer vision, geographic information systems and real-time systems.
+      - >-
+        Our portfolio includes education and e-commerce platforms, HR systems with multi-agent AI, fintech solutions,
+        construction and BIM tools, field reference tools for industrial engineers, security and recognition systems,
+        and modules for accounting and government systems.
+      - >-
+        We help companies automate routine operations, speed up workflows and make data-driven decisions.
+        We deliver turnkey projects — discovery, design, development, testing, deployment and support — including
+        documentation and training for the client's staff.
+    facts:
+      - { label: "Legal form", value: "Sole Proprietor Zhubanov R. Zh." }
+      - { label: "Portfolio", value: "%p projects · %i industries", projects: true }
+      - { label: "Technology", value: "Ruby on Rails · Python · Go · TypeScript" }
+      - { label: "Geography", value: "Kazakhstan and worldwide, remote (UTC+5)" }
+      - { label: "Working languages", value: "Қазақша · Русский · English" }
+    quality:
+      eyebrow: "Quality"
+      title: "Engineering standards by default"
+      lead: "What is usually sold as an add-on is part of every project we deliver."
+      items:
+        - { icon: "check-circle", title: "Automated tests", text: "Model, service, integration and system tests — from a hundred to a thousand tests per project." }
+        - { icon: "shield", title: "Security", text: "Static analysis (Brakeman), dependency audits, access control, action audit logs and masking of sensitive data in logs." }
+        - { icon: "flow", title: "CI/CD", text: "Linters, tests and security checks on every change; reproducible deployment with Docker and Kamal." }
+        - { icon: "doc", title: "Documentation", text: "Architecture, admin and user guides, API docs, test reports and traceability to the requirements." }
+        - { icon: "gauge", title: "AI cost control", text: "Request caching, token budgets, per-agent cost accounting and fallback model chains." }
+        - { icon: "lock", title: "Confidentiality", text: "We work under NDA, deploy on the client's servers without the cloud and never use real data without consent." }
+    models:
+      eyebrow: "Engagement models"
+      title: "Choose how we work together"
+      lead: "A contract with a registered company, a transparent estimate and clear acceptance points."
+      items:
+        - tag: "Fixed price"
+          title: "Turnkey project"
+          text: "Fixed scope, timeline and price based on an agreed specification."
+          points: ["Discovery and specification", "Stage-by-stage acceptance", "Warranty period"]
+        - tag: "Prototype · MVP"
+          title: "Rapid prototype"
+          text: "Validate a hypothesis in a few weeks: a working prototype, metrics and a test report."
+          points: ["Method and success criteria", "Clickable or working prototype", "Presentation for sign-off"]
+        - tag: "Retainer"
+          title: "Evolution and support"
+          text: "A monthly budget of hours for product development, support and monitoring."
+          points: ["Incident SLA", "Updates and security patches", "Priority access to the team"]
+    founder:
+      eyebrow: "Team"
+      title: "Founder"
+      initials: "RZ"
+      name: "Ruslan Zhubanov"
+      role: "Founder · Applied AI Engineer · Full-stack Ruby on Rails"
+      bio:
+        - >-
+          More than five years in commercial software development. Designs LLM systems and takes them to production —
+          agent pipelines and generative features inside products — along with the products themselves: the domain model,
+          background queues, deployment and operations.
+        - >-
+          Working principle: the model reads and classifies, while deterministic code computes the numbers and verdicts —
+          with strict call schemas, caching, self-audit and budgets.
+  contact:
+    eyebrow: "Contact"
+    title: "Tell us about your challenge"
+    lead: "Fill in the brief or write to us directly — we reply within one business day."
+    email: "Email"
+    email_note: "For briefs, specifications and documents"
+    phone: "Phone"
+    phone_note: "Calls and messages, UTC+5 time zone"
+    whatsapp: "Message on WhatsApp"
+    whatsapp_note: "The quickest way to ask a question"
+    location: "Location"
+    location_note: "We work remotely across Kazakhstan and worldwide"
+    copy: "Copy"
+    copied: "Copied"
+    faq_title: "Frequently asked questions"
+    form:
+      title: "Project brief"
+      lead: "A few questions so we understand the task right away."
+      subject: "Brief from the Zhubanov SoftDev website"
+      name: "Name"
+      company: "Company"
+      email: "Email"
+      phone: "Phone"
+      industry: "Industry"
+      timeline: "Desired timeline"
+      choose: "Select"
+      other: "Other"
+      timelines: ["As soon as possible", "1–3 months", "3–6 months", "More than 6 months", "Still exploring"]
+      services: "What you need"
+      message: "Describe the task"
+      message_ph: "Which process should be automated or which product should be built? Is there a specification, deadline or constraints?"
+      submit: "Send brief"
+      note_mail: "The button opens your email client with a ready-made message — just press Send."
+      note_endpoint: "By submitting the form you agree to the processing of the data provided in order to respond to your request."
+      msg_ok: "Thank you! Your brief has been sent — we will reply within one business day."
+      msg_err: "The form could not be sent — opening your email client."
+      msg_mail: "Your email client has opened with a ready-made message. If it did not open, please email us directly."
+
+contact:
+  city: "Uralsk"
+  country: "Kazakhstan"
+  wa_text: "Hello! I would like to discuss a project."
+
+footer:
+  about: "Custom software development and applied artificial intelligence."
+  legal: "Sole Proprietor Zhubanov R. Zh. · Uralsk, Kazakhstan"
+  legal_name: "Sole Proprietor Zhubanov R. Zh."
+  nav: "Navigation"
+  services: "Services"
+  contacts: "Contact"
+  iin: "IIN"
+  nda: "Client and project names are anonymized under confidentiality terms."
+
+notfound:
+  title: "Page not found"
+  text: "The link may be outdated or the address mistyped."
+  home: "Go to home page"

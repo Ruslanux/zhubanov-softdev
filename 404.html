@@ -1,0 +1,24 @@
+---
+layout: default
+title: "404"
+permalink: /404.html
+no_alternates: true
+sitemap: false
+---
+<section class="notfound">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="container">
+    <p class="code grad">404</p>
+    <div class="notfound-grid">
+      {%- for l in site.languages %}
+      {%- assign nf = site.data[l].ui.notfound %}
+      {%- if l == site.lang %}{% assign home = "/" %}{% else %}{% assign home = "/" | append: l | append: "/" %}{% endif %}
+      <div class="card" lang="{{ l }}">
+        <h2>{{ nf.title }}</h2>
+        <p>{{ nf.text }}</p>
+        <a class="card-more" href="{{ home | relative_url }}">{{ nf.home }} {% include icon.html name="arrow-right" px=16 %}</a>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,61 @@
+{%- assign services_url = lp | append: "/services/" -%}
+{%- assign industries_url = lp | append: "/industries/" -%}
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="{{ lp | append: '/' | relative_url }}" aria-label="{{ site.title }}">{% include logo.html %}</a>
+        <p>{{ t.footer.about }}</p>
+        <p class="footer-legal-name">{{ t.footer.legal }}</p>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-title">{{ t.footer.nav }}</h2>
+        <ul>
+          {%- for item in t.nav.items %}
+          <li><a href="{{ lp | append: item.url | relative_url }}">{{ item.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-title">{{ t.footer.services }}</h2>
+        <ul>
+          {%- for s in d.services limit: 6 %}
+          <li><a href="{{ services_url | append: '#' | append: s.id | relative_url }}">{{ s.short }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-title">{{ t.footer.contacts }}</h2>
+        <ul class="footer-contacts">
+          {%- if site.contact.email != "" %}
+          <li><a href="mailto:{{ site.contact.email }}">{% include icon.html name="mail" px=16 %}<span>{{ site.contact.email }}</span></a></li>
+          {%- endif %}
+          {%- if site.contact.phone != "" %}
+          <li><a href="tel:+{{ site.contact.phone | remove: '+' | remove: ' ' }}">{% include icon.html name="phone" px=16 %}<span>{{ site.contact.phone | replace: ' ', '&nbsp;' }}</span></a></li>
+          {%- endif %}
+          {%- if site.contact.whatsapp != "" %}
+          <li><a href="https://wa.me/{{ site.contact.whatsapp }}" rel="noopener" target="_blank">{% include icon.html name="whatsapp" px=16 %}<span>WhatsApp</span></a></li>
+          {%- endif %}
+          {%- if site.contact.telegram != "" %}
+          <li><a href="https://t.me/{{ site.contact.telegram }}" rel="noopener" target="_blank">{% include icon.html name="telegram" px=16 %}<span>Telegram</span></a></li>
+          {%- endif %}
+          {%- if site.contact.linkedin != "" %}
+          <li><a href="{{ site.contact.linkedin }}" rel="noopener" target="_blank">{% include icon.html name="linkedin" px=16 %}<span>LinkedIn</span></a></li>
+          {%- endif %}
+          {%- if site.contact.github != "" %}
+          <li><a href="{{ site.contact.github }}" rel="noopener" target="_blank">{% include icon.html name="github" px=16 %}<span>GitHub</span></a></li>
+          {%- endif %}
+          <li><span class="footer-plain">{% include icon.html name="pin" px=16 %}<span>{{ t.contact.city }}, {{ t.contact.country }}</span></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© {{ site.time | date: "%Y" }} {{ site.title }} · {{ t.footer.legal_name }}{% if site.legal.iin != "" %} · {{ t.footer.iin }} {{ site.legal.iin }}{% endif %}</p>
+      <p class="footer-note">{{ t.footer.nda }}</p>
+    </div>
+  </div>
+</footer>

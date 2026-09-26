@@ -1,0 +1,17 @@
+<div class="console" role="img" aria-label="{{ t.hero.console.aria }}">
+  <div class="console-bar" aria-hidden="true"><span></span><span></span><span></span><code>pipeline.run --trace</code></div>
+  <ol class="console-steps" aria-hidden="true">
+    {%- for s in t.hero.console.steps %}
+    <li class="console-step" style="--i: {{ forloop.index0 }}">
+      <span class="step-num">{{ forloop.index }}</span>
+      <code>{{ s.code }}</code>
+      <span class="step-text">{{ s.text }}</span>
+      <span class="step-tag tag-{{ s.kind }}">{{ s.tag }}</span>
+    </li>
+    {%- endfor %}
+  </ol>
+  <div class="console-foot" aria-hidden="true"><span class="pulse"></span>{{ t.hero.console.foot }}</div>
+</div>
+{%- for b in t.hero.badges %}
+<div class="hero-badge hero-badge-{{ forloop.index }}" aria-hidden="true"><b>{{ b.value }}</b><span>{{ b.label }}</span></div>
+{%- endfor %}

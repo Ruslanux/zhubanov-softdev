@@ -1,0 +1,159 @@
+---
+layout: default
+---
+{%- include vars.html -%}
+{%- assign projects = site.projects | where: "lang", lang | sort: "order" -%}
+{%- assign featured = projects | where: "featured", true -%}
+{%- assign contact_url = lp | append: "/contact/" -%}
+{%- assign projects_url = lp | append: "/projects/" -%}
+{%- assign services_url = lp | append: "/services/" -%}
+{%- assign industries_url = lp | append: "/industries/" -%}
+{%- assign about_url = lp | append: "/about/" -%}
+
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span>{{ t.hero.eyebrow | escape }}</p>
+      <h1 class="hero-title">{{ t.hero.title_html }}</h1>
+      <p class="hero-lead">{{ t.hero.lead }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="{{ contact_url | relative_url }}">{{ t.cta.discuss }} {% include icon.html name="arrow-right" px=18 %}</a>
+        <a class="btn btn-ghost btn-lg" href="{{ projects_url | relative_url }}">{{ t.cta.projects }}</a>
+      </div>
+      <ul class="hero-tech" role="list" aria-label="{{ t.hero.tech_label }}">
+        {%- for x in t.hero.tech %}
+        <li>{{ x }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div class="hero-visual">
+      {% include hero-visual.html %}
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="{{ t.stats_label }}">
+  <div class="container stats-grid">
+    {%- for s in t.stats %}
+    {%- case s.key %}
+      {%- when "projects" %}{% assign n = projects.size %}
+      {%- when "industries" %}{% assign n = d.industries.size %}
+      {%- else %}{% assign n = s.count %}
+    {%- endcase %}
+    <div class="stat">
+      <b data-count="{{ n }}" data-suffix="{{ s.suffix }}">{% if s.value %}{{ s.value }}{% else %}{{ n }}{{ s.suffix }}{% endif %}</b>
+      <span>{{ s.label }}</span>
+    </div>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <header class="section-head section-head-row">
+      <div>
+        <p class="eyebrow"><span class="dot"></span>{{ t.home.services.eyebrow }}</p>
+        <h2>{{ t.home.services.title }}</h2>
+        <p class="lead">{{ t.home.services.lead }}</p>
+      </div>
+      <a class="text-link" href="{{ services_url | relative_url }}">{{ t.cta.all_services }} {% include icon.html name="arrow-right" px=18 %}</a>
+    </header>
+    <div class="grid grid-auto">
+      {%- for s in d.services %}
+      <a class="card" href="{{ services_url | append: '#' | append: s.id | relative_url }}" data-reveal>
+        <span class="card-icon">{% include icon.html name=s.icon %}</span>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.summary }}</p>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="approach">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="dot"></span>{{ t.approach.eyebrow }}</p>
+      <h2>{{ t.approach.title }}</h2>
+      <p class="lead">{{ t.approach.lead }}</p>
+    </header>
+    {% include principles.html %}
+  </div>
+</section>
+
+<section class="section" id="industries">
+  <div class="container">
+    <header class="section-head section-head-row">
+      <div>
+        <p class="eyebrow"><span class="dot"></span>{{ t.home.industries.eyebrow }}</p>
+        <h2>{{ t.home.industries.title }}</h2>
+        <p class="lead">{{ t.home.industries.lead }}</p>
+      </div>
+      <a class="text-link" href="{{ industries_url | relative_url }}">{{ t.cta.all_industries }} {% include icon.html name="arrow-right" px=18 %}</a>
+    </header>
+    <div class="industry-tiles">
+      {%- for ind in d.industries %}
+      {%- assign n = projects | where_exp: "p", "p.industries contains ind.id" | size %}
+      <a class="industry-tile" href="{{ industries_url | append: '#' | append: ind.id | relative_url }}" data-reveal>
+        {% include icon.html name=ind.icon px=22 %}
+        <span>{{ ind.title }}</span>
+        {%- if n > 0 %}<span class="count" title="{{ t.labels.projects_count }}: {{ n }}">{{ n }}</span>{% endif %}
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="projects">
+  <div class="container">
+    <header class="section-head section-head-row">
+      <div>
+        <p class="eyebrow"><span class="dot"></span>{{ t.home.projects.eyebrow }}</p>
+        <h2>{{ t.home.projects.title }}</h2>
+        <p class="lead">{{ t.home.projects.lead }}</p>
+      </div>
+      <a class="text-link" href="{{ projects_url | relative_url }}">{{ t.cta.all_projects }} ({{ projects.size }}) {% include icon.html name="arrow-right" px=18 %}</a>
+    </header>
+    <div class="grid grid-projects">
+      {%- for p in featured limit: 6 %}
+      {% include project-card.html project=p %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="process">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="dot"></span>{{ t.home.process.eyebrow }}</p>
+      <h2>{{ t.home.process.title }}</h2>
+      <p class="lead">{{ t.home.process.lead }}</p>
+    </header>
+    {% include process.html %}
+  </div>
+</section>
+
+<section class="section section-alt" id="stack">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="dot"></span>{{ t.home.stack.eyebrow }}</p>
+      <h2>{{ t.home.stack.title }}</h2>
+      <p class="lead">{{ t.home.stack.lead }}</p>
+    </header>
+    <div class="stack-grid">
+      {%- for g in site.data.stack %}
+      <div class="card stack-group" data-reveal>
+        <h3>{% include icon.html name=g.icon px=20 %}{{ t.stack_groups[g.id] }}</h3>
+        <ul class="chips">
+          {%- for item in g.items %}
+          <li>{{ item }}</li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{% include cta.html %}

@@ -1,0 +1,23 @@
+{%- assign p = include.project -%}
+{%- assign ind = d.industries | where: "id", p.industries[0] | first -%}
+{%- capture search_text -%}{{ p.title }} {{ p.client }} {{ p.description }} {{ p.stack | join: " " }}{%- for i in p.industries -%}{%- assign ii = d.industries | where: "id", i | first %} {{ ii.title }}{%- endfor -%}{%- endcapture -%}
+<a class="card project-card" href="{{ p.url | relative_url }}" data-reveal{% if include.filterable %} data-card data-industries="{{ p.industries | join: ' ' }}" data-text="{{ search_text | downcase | strip_newlines | escape }}"{% endif %}>
+  <div class="project-card-top">
+    <span class="tag">{% include icon.html name=ind.icon px=16 %}{{ ind.short | default: ind.title }}</span>
+    <span class="status status-{{ p.status }}">{{ t.status[p.status] }}</span>
+  </div>
+  <h3>{{ p.title | escape }}</h3>
+  <p class="project-client">{{ p.client | escape }}</p>
+  <p>{{ p.description | escape }}</p>
+  <ul class="mini-metrics">
+    {%- for m in p.metrics limit: 2 %}
+    <li><b>{{ m.value | escape }}</b><span>{{ m.label | escape }}</span></li>
+    {%- endfor %}
+  </ul>
+  <ul class="chips">
+    {%- for s in p.stack limit: 4 %}
+    <li>{{ s | escape }}</li>
+    {%- endfor %}
+  </ul>
+  <span class="card-more">{{ t.cta.case }} {% include icon.html name="arrow-right" px=16 %}</span>
+</a>

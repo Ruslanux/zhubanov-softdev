@@ -1,0 +1,30 @@
+{%- if page.layout == "home" -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": {{ site.title | jsonify }},
+  "legalName": {{ site.legal_name | jsonify }},
+  "url": {{ "/" | absolute_url | jsonify }},
+  "logo": {{ site.logo | absolute_url | jsonify }},
+  "image": {{ site.image | absolute_url | jsonify }},
+  "description": {{ t.meta.org_description | jsonify }},
+  {%- if site.contact.email != "" %}
+  "email": {{ site.contact.email | jsonify }},
+  {%- endif %}
+  {%- if site.contact.phone != "" %}
+  "telephone": {{ site.contact.phone | jsonify }},
+  {%- endif %}
+  "address": { "@type": "PostalAddress", "addressLocality": {{ t.contact.city | jsonify }}, "addressCountry": "KZ" },
+  "areaServed": ["KZ", "Worldwide"],
+  "knowsLanguage": ["kk", "ru", "en"],
+  "knowsAbout": ["Custom software development", "Applied AI", "Large language models", "Ruby on Rails", "Python", "Go", "Computer vision", "GIS", "Business process automation"]
+  {%- assign same_as = "" | split: "" %}
+  {%- if site.contact.linkedin != "" %}{% assign same_as = same_as | push: site.contact.linkedin %}{% endif %}
+  {%- if site.contact.telegram != "" %}{% assign tg = "https://t.me/" | append: site.contact.telegram %}{% assign same_as = same_as | push: tg %}{% endif %}
+  {%- if same_as.size > 0 %},
+  "sameAs": {{ same_as | jsonify }}
+  {%- endif %}
+}
+</script>
+{%- endif -%}

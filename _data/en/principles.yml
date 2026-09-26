@@ -1,0 +1,18 @@
+- icon: cpu
+  title: "The model reads — code computes"
+  text: "We never trust arithmetic, rules or verdicts to the model. That makes results reproducible and verifiable."
+- icon: user-check
+  title: "Expert in the loop"
+  text: "Doubtful cases are never published automatically: a specialist reviews them and decisions are recorded."
+- icon: link
+  title: "Traceability"
+  text: "Every number leads to its source: a document, row, cell, model element or transaction."
+- icon: offline
+  title: "Works without the cloud"
+  text: "CPU models, offline maps, closed networks — client data never leaves the client's infrastructure."
+- icon: check-circle
+  title: "Quality by default"
+  text: "Automated tests, linters, security checks and CI are part of every project."
+- icon: gauge
+  title: "Predictable AI costs"
+  text: "Caching, token budgets and per-agent cost accounting — no surprises on the invoice."

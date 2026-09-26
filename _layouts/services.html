@@ -1,0 +1,75 @@
+---
+layout: default
+---
+{%- include vars.html -%}
+{%- assign projects = site.projects | where: "lang", lang | sort: "order" -%}
+
+<section class="page-hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="container">
+    <p class="eyebrow"><span class="dot"></span>{{ t.pages.services.eyebrow }}</p>
+    <h1>{{ t.pages.services.title }}</h1>
+    <p class="lead">{{ t.pages.services.lead }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container services-layout">
+    <nav aria-label="{{ t.pages.services.toc }}">
+      <ul class="toc" data-toc>
+        {%- for s in d.services %}
+        <li><a href="#{{ s.id }}">{% include icon.html name=s.icon px=18 %}{{ s.short }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+    <div>
+      {%- for s in d.services %}
+      <article class="service-block" id="{{ s.id }}" data-reveal>
+        <div class="service-block-head">
+          <span class="card-icon">{% include icon.html name=s.icon %}</span>
+          <div>
+            <h2>{{ s.title }}</h2>
+            <p>{{ s.text }}</p>
+          </div>
+        </div>
+        <div class="service-cols">
+          <div>
+            <h3 class="col-title">{{ t.pages.services.what }}</h3>
+            <ul class="check-list">
+              {%- for x in s.points %}<li>{{ x }}</li>{% endfor %}
+            </ul>
+          </div>
+          <div>
+            <h3 class="col-title">{{ t.pages.services.deliver }}</h3>
+            <ul class="check-list">
+              {%- for x in s.deliverables %}<li>{{ x }}</li>{% endfor %}
+            </ul>
+          </div>
+        </div>
+        {%- if s.projects %}
+        <div class="service-related">
+          <h3 class="col-title">{{ t.pages.services.related }}</h3>
+          {%- for slug in s.projects %}
+          {%- assign rp = projects | where: "slug", slug | first %}
+          {%- if rp %}<a href="{{ rp.url | relative_url }}">{{ rp.title | escape }}</a>{% endif %}
+          {%- endfor %}
+        </div>
+        {%- endif %}
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="dot"></span>{{ t.home.process.eyebrow }}</p>
+      <h2>{{ t.home.process.title }}</h2>
+      <p class="lead">{{ t.home.process.lead }}</p>
+    </header>
+    {% include process.html %}
+  </div>
+</section>
+
+{% include cta.html %}
