@@ -24,7 +24,7 @@
 
 ## Контакты и форма
 
-Правятся в `_config.yml`, блок `contact`: email, телефон, WhatsApp, Telegram, LinkedIn, GitHub.
+Правятся в `_config.yml`, блок `contact`: email, телефон, WhatsApp, Telegram, GitHub.
 Пустое значение — блок на сайте не показывается. `legal.iin` — ИИН для подвала.
 
 Форма брифа по умолчанию открывает почтовый клиент с готовым письмом. Чтобы письма

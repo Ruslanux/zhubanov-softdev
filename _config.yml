@@ -29,7 +29,6 @@ contact:
   phone: "+7 777 419 7502"
   whatsapp: "77774197502"   # номер без «+», для ссылки wa.me
   telegram: "Ruslanux"      # имя пользователя без «@» → https://t.me/Ruslanux
-  linkedin: "https://www.linkedin.com/in/ruslan-zhubanov-1367b893"
   github: ""                # репозитории раскрывают названия проектов — по умолчанию не выводим
 
 # Реквизиты. Пустое значение — строка в подвале не выводится.

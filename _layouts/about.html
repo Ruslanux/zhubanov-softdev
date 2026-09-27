@@ -95,9 +95,6 @@ layout: default
         {%- for para in a.founder.bio %}
         <p>{{ para }}</p>
         {%- endfor %}
-        {%- if site.contact.linkedin != "" %}
-        <a class="text-link" href="{{ site.contact.linkedin }}" target="_blank" rel="noopener">{% include icon.html name="linkedin" px=18 %} LinkedIn</a>
-        {%- endif %}
       </div>
     </div>
   </div>

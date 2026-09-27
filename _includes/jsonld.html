@@ -20,7 +20,6 @@
   "knowsLanguage": ["kk", "ru", "en"],
   "knowsAbout": ["Custom software development", "Applied AI", "Large language models", "Ruby on Rails", "Python", "Go", "Computer vision", "GIS", "Business process automation"]
   {%- assign same_as = "" | split: "" %}
-  {%- if site.contact.linkedin != "" %}{% assign same_as = same_as | push: site.contact.linkedin %}{% endif %}
   {%- if site.contact.telegram != "" %}{% assign tg = "https://t.me/" | append: site.contact.telegram %}{% assign same_as = same_as | push: tg %}{% endif %}
   {%- if same_as.size > 0 %},
   "sameAs": {{ same_as | jsonify }}
