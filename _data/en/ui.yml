@@ -277,6 +277,11 @@ pages:
       message: "Describe the task"
       message_ph: "Which process should be automated or which product should be built? Is there a specification, deadline or constraints?"
       submit: "Send brief"
+      consent_before: "I consent to the processing of my personal data in accordance with the "
+      consent_link: "Privacy Policy"
+      consent_after: "."
+      consent_label: "Consent to personal data processing"
+      consent_value: "yes"
       note_mail: "The button opens your email client with a ready-made message — just press Send."
       note_endpoint: "By submitting the form you agree to the processing of the data provided in order to respond to your request."
       msg_ok: "Thank you! Your brief has been sent — we will reply within one business day."
@@ -297,6 +302,7 @@ footer:
   contacts: "Contact"
   iin: "IIN"
   nda: "Client and project names are anonymized under confidentiality terms."
+  privacy: "Privacy Policy"
 
 notfound:
   title: "Page not found"

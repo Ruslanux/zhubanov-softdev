@@ -74,6 +74,12 @@ layout: default
           <label for="f-message">{{ f.message }} <span class="req">*</span></label>
           <textarea id="f-message" name="message" required placeholder="{{ f.message_ph }}" data-label="{{ f.message }}"></textarea>
         </div>
+        <div class="field full">
+          <label class="consent-label">
+            <input type="checkbox" name="consent" value="{{ f.consent_value }}" required data-label="{{ f.consent_label }}">
+            <span>{{ f.consent_before }}<a href="{{ lp | append: '/privacy/' | relative_url }}" target="_blank" rel="noopener">{{ f.consent_link }}</a>{{ f.consent_after }} <span class="req">*</span></span>
+          </label>
+        </div>
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
       </div>
       <div class="form-foot">
