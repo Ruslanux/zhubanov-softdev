@@ -5,13 +5,13 @@
 # Когда на аккаунте работают GitHub Actions, можно вместо этого включить push-триггер
 # в .github/workflows/pages.yml и выбрать Source: "GitHub Actions".
 #
-# Свой домен: BASEURL="" script/deploy.sh (и url/CNAME — см. README).
+# Сайт на своём домене zhubanov-softdev.dev (файл CNAME), поэтому baseurl пустой.
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
 
 REPO_URL="$(git config --get remote.origin.url)"
-BASEURL="${BASEURL-/zhubanov-softdev}"
+BASEURL="${BASEURL-}"
 BUILD_DIR="$(mktemp -d)"
 trap 'rm -rf "$BUILD_DIR"' EXIT
 

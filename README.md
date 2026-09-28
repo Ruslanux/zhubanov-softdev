@@ -60,7 +60,7 @@ deliverables: [ … ]  # необязательно
 
 ```bash
 bundle install
-bundle exec jekyll serve      # http://127.0.0.1:4000/zhubanov-softdev/
+bundle exec jekyll serve      # http://127.0.0.1:4000/
 ```
 
 ## Публикация на GitHub Pages (бесплатно)
@@ -79,18 +79,26 @@ bundle exec jekyll serve      # http://127.0.0.1:4000/zhubanov-softdev/
    ```
 
 3. В репозитории: **Settings → Pages → Source: Deploy from a branch → `gh-pages` / root**.
-   Сайт откроется по адресу `https://ruslanux.github.io/zhubanov-softdev/`.
+   Сайт открывается по адресу **https://zhubanov-softdev.dev** (старый адрес
+   `ruslanux.github.io/zhubanov-softdev/` перенаправляет на него).
 
 Повторная публикация после правок — снова `script/deploy.sh`.
 
 Если GitHub Actions на аккаунте доступны, можно обойтись без скрипта: включите
 push-триггер в `.github/workflows/pages.yml` и выберите **Source: GitHub Actions**.
 
-### Адрес без `/zhubanov-softdev`
+### Домен zhubanov-softdev.dev
 
-- **Организация на GitHub** `zhubanov-softdev` и репозиторий `zhubanov-softdev.github.io` →
-  сайт на `https://zhubanov-softdev.github.io/`. В `_config.yml`:
-  `url: "https://zhubanov-softdev.github.io"`, `baseurl: ""`; публикация — `BASEURL="" script/deploy.sh`.
-- **Свой домен** (например `zhubanov-softdev.kz`; подчёркивание в доменах запрещено, поэтому
-  дефис): файл `CNAME` с доменом в корне, `url: "https://zhubanov-softdev.kz"`, `baseurl: ""`,
-  DNS-записи по инструкции GitHub Pages, публикация — `BASEURL="" script/deploy.sh`.
+Домен куплен в Cloudflare Registrar, DNS — в Cloudflare. Все записи в режиме **DNS only**
+(серое облако): через прокси Cloudflare GitHub не выпустит HTTPS-сертификат, а зона `.dev`
+открывается только по HTTPS.
+
+| Type | Name | Content |
+| --- | --- | --- |
+| A | `@` | `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` |
+| AAAA | `@` | `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153` |
+| CNAME | `www` | `ruslanux.github.io` |
+| TXT | `_github-pages-challenge-Ruslanux` | код подтверждения из GitHub → Settings → Pages |
+
+В репозитории — файл `CNAME` с `zhubanov-softdev.dev`, в `_config.yml` — `url` домена и пустой
+`baseurl`. В настройках Pages включено **Enforce HTTPS**.

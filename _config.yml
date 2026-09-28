@@ -12,12 +12,10 @@ description: >-
 lang: ru
 languages: [kk, ru, en]
 
-# Project page (github.com/<login>/zhubanov-softdev):
-#   url: "https://ruslanux.github.io", baseurl: "/zhubanov-softdev"
-# Свой домен (например zhubanov-softdev.kz) или user/organization page:
-#   url: "https://zhubanov-softdev.kz", baseurl: "" и файл CNAME в корне.
-url: "https://ruslanux.github.io"
-baseurl: "/zhubanov-softdev"
+# Свой домен: файл CNAME в корне + DNS в Cloudflare (см. README, «Домен»).
+# Без домена (project page) было бы: url "https://ruslanux.github.io", baseurl "/zhubanov-softdev".
+url: "https://zhubanov-softdev.dev"
+baseurl: ""
 
 logo: /assets/img/logo-512.png
 image: /assets/img/og.png
@@ -73,5 +71,6 @@ exclude:
   - vendor
   - README.md
   - script
+  - print
   - .github
   - .jekyll-cache
