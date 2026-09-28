@@ -51,7 +51,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>© {{ site.time | date: "%Y" }} {{ site.title }} · {{ t.footer.legal_name }}{% if site.legal.iin != "" %} · {{ t.footer.iin }} {{ site.legal.iin }}{% endif %} · <a href="{{ lp | append: '/privacy/' | relative_url }}">{{ t.footer.privacy }}</a></p>
+      <p>© {{ site.time | date: "%Y" }} {{ site.title }} · {{ t.footer.legal_name }}{% if site.legal.iin != "" %} · {{ t.footer.iin }} {{ site.legal.iin }}{% endif %}{% assign footer_certs = site.data.certificates | where: "published", true %}{% if footer_certs.size > 0 %} · <a href="{{ lp | append: '/certificates/' | relative_url }}">{{ t.pages.certificates.title }}</a>{% endif %} · <a href="{{ lp | append: '/privacy/' | relative_url }}">{{ t.footer.privacy }}</a></p>
       <p class="footer-note">{{ t.footer.nda }}</p>
     </div>
   </div>

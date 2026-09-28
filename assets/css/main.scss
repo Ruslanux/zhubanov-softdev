@@ -1312,6 +1312,29 @@ input:focus, select:focus, textarea:focus {
 }
 .consent-label a { text-decoration: underline; }
 
+/* ---------- Сертификаты ---------- */
+.cert-card { display: flex; flex-direction: column; gap: 18px; }
+.cert-head { display: flex; align-items: flex-start; gap: 14px; }
+.cert-head .card-icon { margin: 0; flex: none; }
+.cert-head > div { flex: 1; min-width: 0; }
+.cert-head .status { margin-left: auto; }
+.cert-standard { margin: 0 0 4px; color: var(--accent); font: 500 13px/1.4 var(--font-mono); }
+.cert-standard span { color: var(--muted); }
+.cert-head h3 { margin: 0; }
+.cert-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 20px; margin: 0; }
+.cert-facts .full { grid-column: 1 / -1; }
+.cert-facts dt { margin-bottom: 3px; color: var(--muted); font: 500 11.5px var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+.cert-facts dd { margin: 0; color: var(--text); font-size: 15px; }
+.cert-facts small { color: var(--muted); font-size: 13px; }
+.cert-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.cert-compact { margin: 0; color: var(--text-2); font-size: 14.5px; }
+@media (max-width: 600px) {
+  .cert-facts { grid-template-columns: 1fr; }
+  .cert-head { flex-wrap: wrap; }
+  .cert-head > div { flex-basis: calc(100% - 60px); }
+  .cert-head .status { margin-left: 60px; }
+}
+
 /* ---------- Текстовые страницы (политика конфиденциальности) ---------- */
 .legal-body { max-width: 820px; }
 .legal-body a { text-decoration: underline; text-underline-offset: 2px; }

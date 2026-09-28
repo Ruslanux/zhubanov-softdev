@@ -131,6 +131,21 @@ status:
   concept: "Concept"
 
 pages:
+  certificates:
+    eyebrow: "Certificates"
+    title: "Certificates"
+    all: "All certificates"
+    lead: "Our management systems are certified by an independent certification body. You can open each certificate and verify it in the body's register."
+    valid: "Valid"
+    expired: "Expired"
+    number: "Number"
+    issuer: "Certification body"
+    period: "Validity"
+    until: "valid until"
+    scope: "Scope of certification"
+    open: "Open certificate"
+    verify: "Verify in register"
+    note: "We provide a copy of the certificate and the Statement of Applicability to clients on request, including for tenders."
   services:
     eyebrow: "Services"
     title: "What we do"

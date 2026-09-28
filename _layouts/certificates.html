@@ -1,0 +1,31 @@
+---
+layout: default
+---
+{%- include vars.html -%}
+{%- assign certs = site.data.certificates | where: "published", true -%}
+{%- assign cp = t.pages.certificates -%}
+
+<section class="page-hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="container">
+    <p class="eyebrow"><span class="dot"></span>{{ cp.eyebrow }}</p>
+    <h1>{{ cp.title }}</h1>
+    <p class="lead">{{ cp.lead }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid grid-2 cert-grid">
+      {%- for c in certs %}
+      {% include certificate-card.html cert=c %}
+      {%- endfor %}
+    </div>
+    <div class="note">
+      {% include icon.html name="shield" px=20 %}
+      <p>{{ cp.note }}</p>
+    </div>
+  </div>
+</section>
+
+{% include cta.html %}

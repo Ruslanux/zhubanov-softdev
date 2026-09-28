@@ -21,6 +21,21 @@
   "knowsAbout": ["Custom software development", "Applied AI", "Large language models", "Ruby on Rails", "Python", "Go", "Computer vision", "GIS", "Business process automation"]
   {%- assign same_as = "" | split: "" %}
   {%- if site.contact.telegram != "" %}{% assign tg = "https://t.me/" | append: site.contact.telegram %}{% assign same_as = same_as | push: tg %}{% endif %}
+  {%- assign ld_certs = site.data.certificates | where: "published", true %}
+  {%- if ld_certs.size > 0 %},
+  "hasCredential": [
+    {%- for c in ld_certs %}
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certificate",
+      "name": {{ c.standard | append: " — " | append: c.system[lang] | jsonify }},
+      "identifier": {{ c.number | jsonify }},
+      "recognizedBy": { "@type": "Organization", "name": {{ c.issuer | jsonify }} }
+      {%- if c.verify_url %}, "url": {{ c.verify_url | jsonify }}{% endif %}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+  {%- endif %}
   {%- if same_as.size > 0 %},
   "sameAs": {{ same_as | jsonify }}
   {%- endif %}

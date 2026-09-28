@@ -1,0 +1,35 @@
+{%- assign c = include.cert -%}
+<article class="card cert-card" data-reveal>
+  <div class="cert-head">
+    <span class="card-icon">{% include icon.html name="shield" %}</span>
+    <div>
+      <p class="cert-standard">{{ c.standard }}{% if c.international %} <span>({{ c.international }})</span>{% endif %}</p>
+      <h3>{{ c.system[lang] }}</h3>
+    </div>
+    {%- assign today = site.time | date: "%Y-%m-%d" %}
+    {%- assign until = c.valid_until | date: "%Y-%m-%d" %}
+    {%- if until >= today %}
+    <span class="status status-live">{{ t.pages.certificates.valid }}</span>
+    {%- else %}
+    <span class="status status-concept">{{ t.pages.certificates.expired }}</span>
+    {%- endif %}
+  </div>
+  {%- unless include.compact %}
+  <dl class="cert-facts">
+    <div><dt>{{ t.pages.certificates.number }}</dt><dd>{{ c.number }}</dd></div>
+    <div><dt>{{ t.pages.certificates.issuer }}</dt><dd>{{ c.issuer }}{% if c.accreditation %}<br><small>{{ c.accreditation }}</small>{% endif %}</dd></div>
+    <div><dt>{{ t.pages.certificates.period }}</dt><dd>{{ c.issued | date: "%d.%m.%Y" }} — {{ c.valid_until | date: "%d.%m.%Y" }}</dd></div>
+    <div class="full"><dt>{{ t.pages.certificates.scope }}</dt><dd>{{ c.scope[lang] }}</dd></div>
+  </dl>
+  <div class="cert-actions">
+    {%- if c.file %}
+    <a class="btn btn-primary btn-sm" href="{{ c.file | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="doc" px=16 %} {{ t.pages.certificates.open }}</a>
+    {%- endif %}
+    {%- if c.verify_url %}
+    <a class="btn btn-ghost btn-sm" href="{{ c.verify_url }}" target="_blank" rel="noopener">{% include icon.html name="check-circle" px=16 %} {{ t.pages.certificates.verify }}</a>
+    {%- endif %}
+  </div>
+  {%- else %}
+  <p class="cert-compact">{{ t.pages.certificates.number }}: {{ c.number }} · {{ t.pages.certificates.until }} {{ c.valid_until | date: "%d.%m.%Y" }}</p>
+  {%- endunless %}
+</article>
