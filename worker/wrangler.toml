@@ -1,0 +1,29 @@
+# Приём брифов с сайта: форма → этот Worker → письмо на почту через Cloudflare Email Routing.
+# Разворачивание — см. worker/README.md.
+name = "zs-brief"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+workers_dev = false
+
+routes = [
+  { pattern = "api.zhubanov-softdev.dev", custom_domain = true }
+]
+
+[vars]
+ALLOWED_ORIGINS = "https://zhubanov-softdev.dev"
+MAIL_FROM = "brief@zhubanov-softdev.dev"
+MAIL_TO = "zhubanov1090@gmail.com"
+
+# Отправка только на проверенный адрес Email Routing — другим адресатам Worker писать не может.
+[[send_email]]
+name = "MAILER"
+destination_address = "zhubanov1090@gmail.com"
+
+# Не больше 5 брифов в минуту с одного IP (счётчик живёт в памяти Cloudflare, IP нигде не сохраняется).
+[[ratelimits]]
+name = "LIMITER"
+namespace_id = "1001"
+simple = { limit = 5, period = 60 }
+
+[observability]
+enabled = false

@@ -22,8 +22,10 @@ layout: default
           data-subject="{{ f.subject }}"
           data-msg-ok="{{ f.msg_ok }}"
           data-msg-err="{{ f.msg_err }}"
+          data-msg-rate="{{ f.msg_rate }}"
           data-msg-mail="{{ f.msg_mail }}"
-          {% if site.forms.endpoint != "" %}action="{{ site.forms.endpoint }}" method="post"{% else %}action="mailto:{{ site.contact.email }}" method="post" enctype="text/plain"{% endif %}>
+          data-sending="{{ f.sending }}"
+          {% if site.forms.endpoint != "" %}action="{{ site.forms.endpoint }}" {% endif %}method="post">
       <h2>{{ f.title }}</h2>
       <p class="muted">{{ f.lead }}</p>
       <div class="form-grid">
@@ -76,11 +78,12 @@ layout: default
         </div>
         <div class="field full">
           <label class="consent-label">
-            <input type="checkbox" name="consent" value="{{ f.consent_value }}" required data-label="{{ f.consent_label }}">
+            <input type="checkbox" name="consent" value="{{ f.consent_before }}{{ f.consent_link }}{{ f.consent_after }} ({{ lp | append: '/privacy/' | absolute_url }})" required data-label="{{ f.consent_label }}">
             <span>{{ f.consent_before }}<a href="{{ lp | append: '/privacy/' | relative_url }}" target="_blank" rel="noopener">{{ f.consent_link }}</a>{{ f.consent_after }} <span class="req">*</span></span>
           </label>
         </div>
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
+        <input type="hidden" name="lang" value="{{ lang }}">
       </div>
       <div class="form-foot">
         <small>{% if site.forms.endpoint != "" %}{{ f.note_endpoint }}{% else %}{{ f.note_mail }}{% endif %}</small>

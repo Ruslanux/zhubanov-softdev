@@ -1279,6 +1279,7 @@ input:focus, select:focus, textarea:focus {
 .form-status:empty { display: none; }
 .form-status.ok { background: var(--ok-soft); color: var(--ok); }
 .form-status.err { background: var(--gold-soft); color: var(--gold); }
+.form-status.busy { background: var(--surface-2); color: var(--muted); }
 
 .contact-cards { display: grid; gap: 14px; }
 .contact-card { display: flex; gap: 14px; align-items: flex-start; padding: 20px; }

@@ -296,12 +296,13 @@ pages:
       consent_link: "Privacy Policy"
       consent_after: "."
       consent_label: "Consent to personal data processing"
-      consent_value: "yes"
       note_mail: "The button opens your email client with a ready-made message — just press Send."
-      note_endpoint: "By submitting the form you agree to the processing of the data provided in order to respond to your request."
+      note_endpoint: "Your brief goes straight to our inbox — we will reply within one business day."
       msg_ok: "Thank you! Your brief has been sent — we will reply within one business day."
-      msg_err: "The form could not be sent — opening your email client."
+      msg_err: "The brief could not be sent. Please try again, or email us or message us on Telegram."
       msg_mail: "Your email client has opened with a ready-made message. If it did not open, please email us directly."
+      msg_rate: "Too many submissions in a row. Please wait a minute and try again."
+      sending: "Sending your brief…"
 
 contact:
   city: "Uralsk"

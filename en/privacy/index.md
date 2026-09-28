@@ -18,15 +18,17 @@ covers data we receive through the website https://zhubanov-softdev.dev, by emai
 ## 2. What data we receive {#data}
 
 - **From the brief form and emails:** name, company, email address, phone number, industry, desired
-  timeline, selected services and the text of your request — only what you provide yourself. The form does
-  not send data to the website's server: it composes an email in your mail client, and the data reaches us
-  as a regular email.
+  timeline, selected services and the text of your request — only what you provide yourself. The form
+  sends the data over an encrypted connection (HTTPS) to a handler on the Cloudflare platform, which
+  immediately forwards it to us by email and does not store it. The time of your consent to data
+  processing is recorded with the brief.
 - **From messengers** (Telegram, WhatsApp) — if you write to us there: name or username, phone number,
   message content.
 - **Technical data.** The website is hosted on GitHub Pages: GitHub logs visitors' IP addresses for
-  security purposes. Fonts are loaded from Google Fonts servers, so Google receives your IP address. The
-  website itself **uses no cookies and no analytics**; the browser stores only your chosen colour theme
-  (light or dark), which is not personal data.
+  security purposes. Fonts are loaded from Google Fonts servers, so Google receives your IP address. When
+  you send a brief, Cloudflare uses your IP address to protect against spam (by limiting the number of
+  submissions); we neither receive nor store it. The website itself **uses no cookies and no analytics**;
+  the browser stores only your chosen colour theme (light or dark), which is not personal data.
 
 ## 3. Why we use it {#purposes}
 
@@ -44,10 +46,10 @@ message, and the conclusion and performance of a contract with you.
 ## 5. Who receives the data {#recipients}
 
 We do not share your data with third parties, except the services through which it technically passes and
-is stored: email (Google), the messenger you choose (Telegram or WhatsApp) and website hosting (GitHub).
-The servers of these services may be located outside the Republic of Kazakhstan; by sending a request you
-agree to such cross-border transfer. Data may also be provided to state authorities where the law directly
-requires it.
+is stored: email (Google), the Cloudflare platform (delivery of briefs from the website, DNS), the
+messenger you choose (Telegram or WhatsApp) and website hosting (GitHub). The servers of these services
+may be located outside the Republic of Kazakhstan; by sending a request you agree to such cross-border
+transfer. Data may also be provided to state authorities where the law directly requires it.
 
 ## 6. How long we keep it {#retention}
 

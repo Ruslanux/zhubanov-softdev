@@ -72,5 +72,6 @@ exclude:
   - README.md
   - script
   - print
+  - worker
   - .github
   - .jekyll-cache

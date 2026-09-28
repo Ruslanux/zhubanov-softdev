@@ -212,7 +212,7 @@
     });
   });
 
-  /* ---------- Бриф: endpoint (Formspree и т. п.) или письмо ---------- */
+  /* ---------- Бриф: отправка на endpoint (Cloudflare Worker) или, если его нет, письмом ---------- */
   var form = document.querySelector("[data-brief-form]");
   if (form) {
     var status = form.querySelector("[data-form-status]");
@@ -224,7 +224,7 @@
       var lines = [];
       var groups = {};
       Array.prototype.forEach.call(form.elements, function (el) {
-        if (!el.name || el.type === "submit" || el.name === "_gotcha") return;
+        if (!el.name || el.type === "submit" || el.type === "hidden" || el.name === "_gotcha") return;
         var label = el.dataset.label || el.name;
         if (el.type === "checkbox" || el.type === "radio") {
           if (!el.checked) return;
@@ -259,19 +259,22 @@
       }
       var button = form.querySelector('[type="submit"]');
       button.disabled = true;
-      var data = new FormData(form);
-      data.append("brief", composeText());
-      fetch(endpoint, { method: "POST", body: data, headers: { Accept: "application/json" } })
+      form.setAttribute("aria-busy", "true");
+      setStatus(form.dataset.sending, "busy");
+      fetch(endpoint, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
         .then(function (res) {
+          if (res.status === 429) throw new Error("rate");
           if (!res.ok) throw new Error(String(res.status));
           form.reset();
           setStatus(form.dataset.msgOk, "ok");
         })
-        .catch(function () {
-          setStatus(form.dataset.msgErr, "err");
-          openMail();
+        .catch(function (err) {
+          setStatus(err && err.message === "rate" ? form.dataset.msgRate : form.dataset.msgErr, "err");
         })
-        .then(function () { button.disabled = false; });
+        .then(function () {
+          button.disabled = false;
+          form.removeAttribute("aria-busy");
+        });
     });
   }
 })();
