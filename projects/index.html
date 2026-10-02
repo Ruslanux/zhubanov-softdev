@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<meta name="theme-color" content="#070b14">
+<script>
+  (function () {
+    var root = document.documentElement;
+    root.classList.add("js");
+    // Если main.js не загрузится, блоки с анимацией появления не должны остаться скрытыми.
+    setTimeout(function () { if (!window.__zsReady) root.classList.remove("js"); }, 2500);
+    try {
+      var saved = localStorage.getItem("theme");
+      if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
+    } catch (e) {}
+  })();
+</script>
+<!-- Begin Jekyll SEO tag v2.9.0 -->
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Проекты" />
+<meta name="author" content="Zhubanov SoftDev" />
+<meta property="og:locale" content="ru" />
+<meta name="description" content="Портфолио Zhubanov SoftDev: обезличенные кейсы с задачей, решением и измеримым результатом." />
+<meta name="twitter:description" property="og:description" content="Портфолио Zhubanov SoftDev: обезличенные кейсы с задачей, решением и измеримым результатом." />
+<link rel="canonical" href="https://zhubanov-softdev.dev/projects/" />
+<meta property="og:url" content="https://zhubanov-softdev.dev/projects/" />
+<meta property="og:site_name" content="Zhubanov SoftDev" />
+<meta property="og:image" content="https://zhubanov-softdev.dev/assets/img/og.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://zhubanov-softdev.dev/assets/img/og.png" />
+<meta name="twitter:title" content="Проекты" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Zhubanov SoftDev"},"description":"Портфолио Zhubanov SoftDev: обезличенные кейсы с задачей, решением и измеримым результатом.","headline":"Проекты","image":"https://zhubanov-softdev.dev/assets/img/og.png","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://zhubanov-softdev.dev/assets/img/logo-512.png"},"name":"Zhubanov SoftDev"},"url":"https://zhubanov-softdev.dev/projects/"}</script>
+<!-- End Jekyll SEO tag -->
+
+<title>Проекты — Zhubanov SoftDev</title>
+<link rel="alternate" hreflang="kk" href="https://zhubanov-softdev.dev/kk/projects/">
+<link rel="alternate" hreflang="ru" href="https://zhubanov-softdev.dev/projects/">
+<link rel="alternate" hreflang="en" href="https://zhubanov-softdev.dev/en/projects/">
+<link rel="alternate" hreflang="x-default" href="https://zhubanov-softdev.dev/projects/">
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="/assets/css/main.css">
+
+
+</head>
+<body class="page-projects">
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Zhubanov SoftDev"><svg class="logo-mark" viewBox="0 0 32 32" width="34" height="34" aria-hidden="true" focusable="false">
+  <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="8" fill="#0e1627" stroke="#2cc4e8" stroke-opacity=".4" stroke-width="1.5"/>
+  <path d="M8 9.5h11.5L8.5 21.5H20" fill="none" stroke="#2cc4e8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="logo-cursor" x="21.5" y="20" width="4.5" height="2.8" rx="1" fill="#f3c24f"/>
+</svg>
+<span class="logo-text"><b>Zhubanov</b><span>SoftDev</span></span>
+</a>
+
+    <nav class="site-nav" id="site-nav" aria-label="Основная навигация" data-nav>
+      <ul class="nav-list">
+        <li><a href="/services/">Услуги</a></li>
+        <li><a href="/industries/">Отрасли</a></li>
+        <li><a href="/projects/" aria-current="page">Проекты</a></li>
+        <li><a href="/about/">О компании</a></li>
+        <li><a href="/contact/">Контакты</a></li>
+      </ul>
+      <div class="nav-mobile-extra">
+        <div class="lang-switch lang-switch-mobile" role="group" aria-label="Язык сайта">
+  <a href="/kk/projects/" hreflang="kk" lang="kk" title="Қазақша">Қаз</a>
+  <a href="/projects/" hreflang="ru" lang="ru" title="Русский" aria-current="true">Рус</a>
+  <a href="/en/projects/" hreflang="en" lang="en" title="English">Eng</a>
+</div>
+        <a class="btn btn-primary btn-block" href="/contact/">Обсудить проект <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</a>
+        <a class="nav-contact" href="mailto:zhubanov1090@gmail.com"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+ zhubanov1090@gmail.com</a>
+        <a class="nav-contact" href="tel:+77774197502"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 4.2 2 2 0 0 1 3.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+ +7&nbsp;777&nbsp;419&nbsp;7502</a>
+        <a class="nav-contact" href="https://t.me/Ruslanux" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.5 3.5-19 7.3 6.4 2.3 2.3 6.9 3.6-4.3 4.6 3.4z"/><path d="m8.9 13.1 9.1-6.6-6.8 8.4"/></svg>
+ @Ruslanux</a>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch lang-switch-header" role="group" aria-label="Язык сайта">
+  <a href="/kk/projects/" hreflang="kk" lang="kk" title="Қазақша">Қаз</a>
+  <a href="/projects/" hreflang="ru" lang="ru" title="Русский" aria-current="true">Рус</a>
+  <a href="/en/projects/" hreflang="en" lang="en" title="English">Eng</a>
+</div>
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Сменить тему оформления" title="Сменить тему оформления">
+        <svg class="icon icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+
+        <svg class="icon icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg>
+
+      </button>
+      <a class="btn btn-primary btn-sm header-cta" href="/contact/">Обсудить проект</a>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню" data-label-open="Открыть меню" data-label-close="Закрыть меню">
+        <svg class="icon icon-menu" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+
+        <svg class="icon icon-close" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+
+      </button>
+    </div>
+  </div>
+</header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="container">
+    <p class="eyebrow"><span class="dot"></span>Портфолио</p>
+    <h1>Проекты</h1>
+    <p class="lead">Продукты в эксплуатации, решения технологических задач крупных компаний, прототипы и собственные разработки. Каждый кейс — с задачей, решением и измеримым результатом.</p>
+  </div>
+</section>
+
+<section class="section" data-projects>
+  <div class="container">
+    <div class="filters">
+      <div class="filter-chips" role="group" aria-label="Фильтр по отрасли">
+        <button class="filter-chip" type="button" data-filter="all" aria-pressed="true">Все <span class="n">19</span></button>
+        <button class="filter-chip" type="button" data-filter="edtech" aria-pressed="false">Образование <span class="n">2</span></button>
+        <button class="filter-chip" type="button" data-filter="ecommerce" aria-pressed="false">E-commerce <span class="n">1</span></button>
+        <button class="filter-chip" type="button" data-filter="fintech" aria-pressed="false">Финансы <span class="n">4</span></button>
+        <button class="filter-chip" type="button" data-filter="hrtech" aria-pressed="false">HR Tech <span class="n">1</span></button>
+        <button class="filter-chip" type="button" data-filter="construction" aria-pressed="false">Строительство <span class="n">3</span></button>
+        <button class="filter-chip" type="button" data-filter="industry" aria-pressed="false">Промышленность <span class="n">1</span></button>
+        <button class="filter-chip" type="button" data-filter="security" aria-pressed="false">Безопасность <span class="n">3</span></button>
+        <button class="filter-chip" type="button" data-filter="smartcity" aria-pressed="false">Транспорт <span class="n">1</span></button>
+        <button class="filter-chip" type="button" data-filter="govtech" aria-pressed="false">Госсектор <span class="n">1</span></button>
+        <button class="filter-chip" type="button" data-filter="social" aria-pressed="false">Социальные <span class="n">2</span></button>
+        <button class="filter-chip" type="button" data-filter="operations" aria-pressed="false">Операции <span class="n">1</span></button>
+        <button class="filter-chip" type="button" data-filter="logistics" aria-pressed="false">Логистика <span class="n">1</span></button>
+        <button class="filter-chip" type="button" data-filter="devtools" aria-pressed="false">DevTools <span class="n">3</span></button>
+      </div>
+      <label class="search">
+        <span class="visually-hidden">Поиск по проектам и технологиям</span>
+        <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+
+        <input type="search" placeholder="Поиск по проектам и технологиям" data-search autocomplete="off">
+      </label>
+    </div>
+    <p class="results-meta" data-results data-template="Показано проектов: {n} из {total}" aria-live="polite"></p>
+
+    <div class="grid grid-projects">
+      <a class="card project-card" href="/projects/edu-center/" data-reveal data-card data-industries="edtech" data-text="цифровая платформа образовательного центра с ии-помощником преподавателя образовательный центр, казахстан сайт, каталог курсов и четыре личных кабинета — ученика, родителя, преподавателя и администратора — с генерацией учебных материалов на ии, онлайн-уроками и оплатой. ruby on rails 8.1 claude api postgresql hotwire tailwind css anthropic sdk solid queue devise pundit halyk epay web push capybara kamal 2 образование">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 9 12 4 2 9l10 5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><path d="M22 9v6"/></svg>
+Образование</span>
+    <span class="status status-ready">Готов к внедрению</span>
+  </div>
+  <h3>Цифровая платформа образовательного центра с ИИ-помощником преподавателя</h3>
+  <p class="project-client">Образовательный центр, Казахстан</p>
+  <p>Сайт, каталог курсов и четыре личных кабинета — ученика, родителя, преподавателя и администратора — с генерацией учебных материалов на ИИ, онлайн-уроками и оплатой.</p>
+  <ul class="mini-metrics">
+    <li><b>805</b><span>автотестов</span></li>
+    <li><b>4</b><span>личных кабинета с ролевой навигацией</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Ruby on Rails 8.1</li>
+    <li>Claude API</li>
+    <li>PostgreSQL</li>
+    <li>Hotwire</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/hr-agents/" data-reveal data-card data-industries="hrtech" data-text="hr-платформа с мультиагентным искусственным интеллектом hr tech-продукт, saas для компаний автоматизация полного цикла работы с персоналом: 16 ии-агентов закрывают найм, онбординг, оценку эффективности, обучение, вовлечённость и комплаенс. ruby on rails 8.1 rubyllm react typescript inertia.js vite postgresql solid queue action policy meilisearch recharts prawn google calendar api slack rspec kamal 2 управление персоналом">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8"/><path d="M18.5 14.3c1.8.8 3 2.8 3 5.7"/></svg>
+HR Tech</span>
+    <span class="status status-ready">Готов к внедрению</span>
+  </div>
+  <h3>HR-платформа с мультиагентным искусственным интеллектом</h3>
+  <p class="project-client">HR Tech-продукт, SaaS для компаний</p>
+  <p>Автоматизация полного цикла работы с персоналом: 16 ИИ-агентов закрывают найм, онбординг, оценку эффективности, обучение, вовлечённость и комплаенс.</p>
+  <ul class="mini-metrics">
+    <li><b>1 005</b><span>автотестов</span></li>
+    <li><b>16</b><span>ИИ-агентов под оркестратором</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Ruby on Rails 8.1</li>
+    <li>RubyLLM</li>
+    <li>React</li>
+    <li>TypeScript</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/covenant-agent/" data-reveal data-card data-industries="fintech" data-text="ии-агент проверки финансовых ковенантов банковский ии-челлендж агент читает корпус кредитной документации и леджер транзакций и по каждому ковенанту каждого заёмщика выдаёт вердикт, фактическое значение и транзакцию-доказательство. python anthropic sdk claude vision pymupdf json schema prompt caching финансы и банки">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 10h19"/><path d="M6.5 15h4"/></svg>
+Финансы</span>
+    <span class="status status-pilot">Прототип · пилот</span>
+  </div>
+  <h3>ИИ-агент проверки финансовых ковенантов</h3>
+  <p class="project-client">Банковский ИИ-челлендж</p>
+  <p>Агент читает корпус кредитной документации и леджер транзакций и по каждому ковенанту каждого заёмщика выдаёт вердикт, фактическое значение и транзакцию-доказательство.</p>
+  <ul class="mini-metrics">
+    <li><b>97,2 %</b><span>совпадение с эталоном: 35 из 36 ячеек</span></li>
+    <li><b>84</b><span>ячейки закрытого набора без критических находок</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Python</li>
+    <li>Anthropic SDK</li>
+    <li>Claude vision</li>
+    <li>PyMuPDF</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/counter-uav/" data-reveal data-card data-industries="security" data-text="центр управления сетью комплексов противодействия бпла разработчик систем защиты объектов программное обеспечение централизованного мониторинга и управления сетью стационарных комплексов обнаружения и подавления беспилотников из единого центра — офлайн, 24/7. go websocket sqlite maplibre gl pmtiles mbtiles excelize go-pdf windows service systemd docker безопасность и защита объектов">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="m12 12 6.4-6.4"/><circle cx="12" cy="12" r="1"/></svg>
+Безопасность</span>
+    <span class="status status-ready">Готов к внедрению</span>
+  </div>
+  <h3>Центр управления сетью комплексов противодействия БПЛА</h3>
+  <p class="project-client">Разработчик систем защиты объектов</p>
+  <p>Программное обеспечение централизованного мониторинга и управления сетью стационарных комплексов обнаружения и подавления беспилотников из единого центра — офлайн, 24/7.</p>
+  <ul class="mini-metrics">
+    <li><b>70–6000 МГц</b><span>диапазон обнаружения и пеленгации</span></li>
+    <li><b>24/7</b><span>работа без интернета</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Go</li>
+    <li>WebSocket</li>
+    <li>SQLite</li>
+    <li>MapLibre GL</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/night-anpr/" data-reveal data-card data-industries="smartcity security" data-text="ночное распознавание номерных знаков на обычных ip-камерах оператор saas-платформы для парковок модуль поднимает точность распознавания государственных номеров казахстана ночью с ~87 % до 97,5 % — без специальных anpr-камер и без облака. python pytorch onnx runtime opencv numpy yolo crnn · ctc fastapi pydantic docker транспорт и умный город безопасность и защита объектов">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 17H3v-4.5L5 7h14l2 5.5V17h-2"/><path d="M3 12.5h18"/><circle cx="7.5" cy="17" r="2"/><circle cx="16.5" cy="17" r="2"/><path d="M9.5 17h5"/></svg>
+Транспорт</span>
+    <span class="status status-pilot">Прототип · пилот</span>
+  </div>
+  <h3>Ночное распознавание номерных знаков на обычных IP-камерах</h3>
+  <p class="project-client">Оператор SaaS-платформы для парковок</p>
+  <p>Модуль поднимает точность распознавания государственных номеров Казахстана ночью с ~87 % до 97,5 % — без специальных ANPR-камер и без облака.</p>
+  <ul class="mini-metrics">
+    <li><b>97,5 %</b><span>точность ночью против 86,5 % у базового подхода</span></li>
+    <li><b>0 %</b><span>ложных чтений</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Python</li>
+    <li>PyTorch</li>
+    <li>ONNX Runtime</li>
+    <li>OpenCV</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/bim-volumes/" data-reveal data-card data-industries="construction" data-text="привязка выполненных объёмов к bim-модели по сметам и актам крупная строительная группа прототип связывает строки смет и актов выполненных работ с конкретными элементами bim-модели и ведёт учёт проектных, заявленных и принятых объёмов с полной трассировкой. python ifcopenshell claude api three.js numpy fastapi openpyxl pymupdf sqlite playwright pytest строительство и bim">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 21V8l7-4v17"/><path d="M11 9h9v12"/><path d="M2 21h20"/><path d="M7 11h1M7 15h1M14 13h2M14 17h2"/></svg>
+Строительство</span>
+    <span class="status status-pilot">Прототип · пилот</span>
+  </div>
+  <h3>Привязка выполненных объёмов к BIM-модели по сметам и актам</h3>
+  <p class="project-client">Крупная строительная группа</p>
+  <p>Прототип связывает строки смет и актов выполненных работ с конкретными элементами BIM-модели и ведёт учёт проектных, заявленных и принятых объёмов с полной трассировкой.</p>
+  <ul class="mini-metrics">
+    <li><b>99,4 %</b><span>точность связей на независимом тесте (цель ≥ 95 %)</span></li>
+    <li><b>97,2 %</b><span>строк привязано автоматически (цель ≥ 70 %)</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Python</li>
+    <li>IfcOpenShell</li>
+    <li>Claude API</li>
+    <li>three.js</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/marketplace/" data-reveal data-card data-industries="ecommerce fintech" data-text="мультивендорный маркетплейс для рынка казахстана e-commerce-стартап маркетплейс с кабинетами продавцов, стейт-машиной заказов, возвратами, движком комиссий и акций и четырьмя платёжными шлюзами. ruby on rails 8.1 postgresql hotwire phlex tailwind css aasm cancancan money-rails pg_search solid queue web push rspec pwa электронная коммерция финансы и банки">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="20" r="1.3"/><circle cx="18" cy="20" r="1.3"/><path d="M2.5 3h2.6l2.6 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.5L21.5 8H6"/></svg>
+E-commerce</span>
+    <span class="status status-ready">Готов к внедрению</span>
+  </div>
+  <h3>Мультивендорный маркетплейс для рынка Казахстана</h3>
+  <p class="project-client">E-commerce-стартап</p>
+  <p>Маркетплейс с кабинетами продавцов, стейт-машиной заказов, возвратами, движком комиссий и акций и четырьмя платёжными шлюзами.</p>
+  <ul class="mini-metrics">
+    <li><b>4</b><span>платёжных шлюза: Kaspi, Halyk, Freedom и тестовый</span></li>
+    <li><b>50+</b><span>сервисов бизнес-логики</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Ruby on Rails 8.1</li>
+    <li>PostgreSQL</li>
+    <li>Hotwire</li>
+    <li>Phlex</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/bim-standards/" data-reveal data-card data-industries="construction" data-text="проверка bim-моделей по корпоративным стандартам с помощью ии крупная строительная группа ии переводит пункты стандарта в утверждённые правила, а проверку модели выполняет детерминированный код — с 3d-визуализацией замечаний и выгрузкой в bcf. python ifcopenshell claude api three.js numpy fastapi bcf 2.1 ifc4 playwright pytest строительство и bim">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 21V8l7-4v17"/><path d="M11 9h9v12"/><path d="M2 21h20"/><path d="M7 11h1M7 15h1M14 13h2M14 17h2"/></svg>
+Строительство</span>
+    <span class="status status-pilot">Прототип · пилот</span>
+  </div>
+  <h3>Проверка BIM-моделей по корпоративным стандартам с помощью ИИ</h3>
+  <p class="project-client">Крупная строительная группа</p>
+  <p>ИИ переводит пункты стандарта в утверждённые правила, а проверку модели выполняет детерминированный код — с 3D-визуализацией замечаний и выгрузкой в BCF.</p>
+  <ul class="mini-metrics">
+    <li><b>100 %</b><span>точность замечаний на контрольной выборке</span></li>
+    <li><b>99 %</b><span>проверок выполнено автоматически</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Python</li>
+    <li>IfcOpenShell</li>
+    <li>Claude API</li>
+    <li>three.js</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/requirements-graph/" data-reveal data-card data-industries="construction" data-text="реестр требований и граф связей из базы знаний крупная строительная группа сервис разбирает стандарты, регламенты и таблицы, выделяет проверяемые требования с дословной цитатой источника и строит граф связей между требованиями, типовыми решениями и проверками. python claude api cytoscape.js fastapi pymupdf python-docx openpyxl sqlite pydantic pytest строительство и bim">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 21V8l7-4v17"/><path d="M11 9h9v12"/><path d="M2 21h20"/><path d="M7 11h1M7 15h1M14 13h2M14 17h2"/></svg>
+Строительство</span>
+    <span class="status status-pilot">Прототип · пилот</span>
+  </div>
+  <h3>Реестр требований и граф связей из базы знаний</h3>
+  <p class="project-client">Крупная строительная группа</p>
+  <p>Сервис разбирает стандарты, регламенты и таблицы, выделяет проверяемые требования с дословной цитатой источника и строит граф связей между требованиями, типовыми решениями и проверками.</p>
+  <ul class="mini-metrics">
+    <li><b>94,8 %</b><span>точность извлечения на новых документах (цель ≥ 90 %)</span></li>
+    <li><b>100 %</b><span>полнота извлечения на новых документах</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Python</li>
+    <li>Claude API</li>
+    <li>Cytoscape.js</li>
+    <li>FastAPI</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/ops-assistants/" data-reveal data-card data-industries="operations logistics" data-text="ии-помощники для платформы управления ремонтным производством разработчик отраслевой erp-платформы встроенные ии-помощники отвечают сотрудникам и руководителям по данным и документам платформы, анализируют ситуации и готовят решения — строго в пределах прав пользователя. ruby on rails 8.1 rubyllm postgresql tool calling solid queue hotwire roo caxlsx pdf-reader операционное управление логистика и склад">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 6h10M4 12h4M12 12h8M4 18h12"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>
+Операции</span>
+    <span class="status status-ready">Готов к внедрению</span>
+  </div>
+  <h3>ИИ-помощники для платформы управления ремонтным производством</h3>
+  <p class="project-client">Разработчик отраслевой ERP-платформы</p>
+  <p>Встроенные ИИ-помощники отвечают сотрудникам и руководителям по данным и документам платформы, анализируют ситуации и готовят решения — строго в пределах прав пользователя.</p>
+  <ul class="mini-metrics">
+    <li><b>5 + 1</b><span>профильных помощников и координатор</span></li>
+    <li><b>150</b><span>контрольных вопросов для приёмки</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Ruby on Rails 8.1</li>
+    <li>RubyLLM</li>
+    <li>PostgreSQL</li>
+    <li>Tool calling</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/reconciliation/" data-reveal data-card data-industries="fintech govtech" data-text="акты сверки с эцп и интеграцией с 1с it-компания, сервисы для бухгалтерии раздел налогового кабинета для формирования, автоматической сверки, согласования и подписания актов сверки взаиморасчётов с контрагентами. ruby on rails 8 postgresql pki / x.509 1с api hotwire prawn caxlsx solid queue финансы и банки государственный сектор">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 10h19"/><path d="M6.5 15h4"/></svg>
+Финансы</span>
+    <span class="status status-ready">Готов к внедрению</span>
+  </div>
+  <h3>Акты сверки с ЭЦП и интеграцией с 1С</h3>
+  <p class="project-client">IT-компания, сервисы для бухгалтерии</p>
+  <p>Раздел налогового кабинета для формирования, автоматической сверки, согласования и подписания актов сверки взаиморасчётов с контрагентами.</p>
+  <ul class="mini-metrics">
+    <li><b>94</b><span>автотеста, включая подписание ЭЦП</span></li>
+    <li><b>2 стороны</b><span>подписывают один и тот же документ</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Ruby on Rails 8</li>
+    <li>PostgreSQL</li>
+    <li>PKI / X.509</li>
+    <li>1С API</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/qa-agent/" data-reveal data-card data-industries="devtools" data-text="ии-агент сопровождения сквозных автотестов в ci it-компания, разработчик по переносимый агент в конвейере ci запускает e2e-тесты после развёртывания, разбирает падения, чинит устаревшие тесты и оформляет дефекты — все изменения через pull request с ревью. typescript node.js playwright zod vitest github actions gitlab ci azure devops bats shellcheck ruby on rails инструменты разработки">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="m7 9 3 3-3 3"/><path d="M12.5 15H17"/></svg>
+DevTools</span>
+    <span class="status status-ready">Готов к внедрению</span>
+  </div>
+  <h3>ИИ-агент сопровождения сквозных автотестов в CI</h3>
+  <p class="project-client">IT-компания, разработчик ПО</p>
+  <p>Переносимый агент в конвейере CI запускает E2E-тесты после развёртывания, разбирает падения, чинит устаревшие тесты и оформляет дефекты — все изменения через pull request с ревью.</p>
+  <ul class="mini-metrics">
+    <li><b>3</b><span>CI-системы: GitHub, GitLab, Azure DevOps</span></li>
+    <li><b>24</b><span>изменения интерфейса в контрольном наборе</span></li>
+  </ul>
+  <ul class="chips">
+    <li>TypeScript</li>
+    <li>Node.js</li>
+    <li>Playwright</li>
+    <li>Zod</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/instrumentation/" data-reveal data-card data-industries="industry" data-text="офлайн-инструментарий инженера кипиа собственный продукт · нефтегаз и энергетика справочник и набор калькуляторов для инженеров контрольно-измерительных приборов: работает в поле без связи и синхронизируется при появлении сети. ruby on rails 8.1 postgresql hotwire phlex pwa pg_search tesseract.js prawn pdf web push kamal 2 промышленность и энергетика">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21V11l6 4v-4l6 4V5h6v16z"/><path d="M7 18h1M12 18h1M17 18h1"/></svg>
+Промышленность</span>
+    <span class="status status-live">В эксплуатации</span>
+  </div>
+  <h3>Офлайн-инструментарий инженера КИПиА</h3>
+  <p class="project-client">Собственный продукт · нефтегаз и энергетика</p>
+  <p>Справочник и набор калькуляторов для инженеров контрольно-измерительных приборов: работает в поле без связи и синхронизируется при появлении сети.</p>
+  <ul class="mini-metrics">
+    <li><b>10+</b><span>инженерных модулей</span></li>
+    <li><b>Offline</b><span>работа без связи с синхронизацией</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Ruby on Rails 8.1</li>
+    <li>PostgreSQL</li>
+    <li>Hotwire</li>
+    <li>Phlex</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/access-management/" data-reveal data-card data-industries="security" data-text="концепция платформы централизованного управления it-доступами энергетическая компания концепция и кликабельный прототип системы, в которой сотрудник с одной корпоративной учётной записью и mfa подключается к разрешённым серверам в один клик, а секреты никогда не попадают к пользователю. active directory ldap sso mfa vault ssh / rdp siem безопасность и защита объектов">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="m12 12 6.4-6.4"/><circle cx="12" cy="12" r="1"/></svg>
+Безопасность</span>
+    <span class="status status-concept">Концепция</span>
+  </div>
+  <h3>Концепция платформы централизованного управления IT-доступами</h3>
+  <p class="project-client">Энергетическая компания</p>
+  <p>Концепция и кликабельный прототип системы, в которой сотрудник с одной корпоративной учётной записью и MFA подключается к разрешённым серверам в один клик, а секреты никогда не попадают к пользователю.</p>
+  <ul class="mini-metrics">
+    <li><b>36</b><span>страниц концепции</span></li>
+    <li><b>58</b><span>слайдов для приёмки</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Active Directory</li>
+    <li>LDAP</li>
+    <li>SSO</li>
+    <li>MFA</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/family-platform/" data-reveal data-card data-industries="social" data-text="платформа серьёзных знакомств и создания семьи социальный стартап, казахстан платформа знакомств с семейными ценностями: система из пяти этапов-свиданий ведёт пару от онлайн-знакомства до решения о создании семьи. ruby on rails 8.1 postgresql hotwire action cable tailwind css devise pundit ransack chartkick prawn pdf halyk epay социальные платформы и нко">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L3 21l1.4-5.4A8.5 8.5 0 1 1 21 12z"/><path d="M12 15.5s-3.2-1.9-3.2-4.1a1.7 1.7 0 0 1 3.2-.8 1.7 1.7 0 0 1 3.2.8c0 2.2-3.2 4.1-3.2 4.1z"/></svg>
+Социальные</span>
+    <span class="status status-ready">Готов к внедрению</span>
+  </div>
+  <h3>Платформа серьёзных знакомств и создания семьи</h3>
+  <p class="project-client">Социальный стартап, Казахстан</p>
+  <p>Платформа знакомств с семейными ценностями: система из пяти этапов-свиданий ведёт пару от онлайн-знакомства до решения о создании семьи.</p>
+  <ul class="mini-metrics">
+    <li><b>5</b><span>этапов от знакомства до решения</span></li>
+    <li><b>Real-time</b><span>чат с персональными потоками</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Ruby on Rails 8.1</li>
+    <li>PostgreSQL</li>
+    <li>Hotwire</li>
+    <li>Action Cable</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/mutual-aid/" data-reveal data-card data-industries="social" data-text="платформа взаимопомощи с верифицированными организациями социальный проект люди публикуют просьбы о помощи и откликаются на чужие, а верифицированные организации — детские дома, дома престарелых, благотворительные фонды — создают запросы от имени подопечных. ruby on rails 8 postgresql hotwire action cable tailwind css devise pundit kaminari sentry kamal 2 социальные платформы и нко">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12a8.5 8.5 0 0 1-12.4 7.6L3 21l1.4-5.4A8.5 8.5 0 1 1 21 12z"/><path d="M12 15.5s-3.2-1.9-3.2-4.1a1.7 1.7 0 0 1 3.2-.8 1.7 1.7 0 0 1 3.2.8c0 2.2-3.2 4.1-3.2 4.1z"/></svg>
+Социальные</span>
+    <span class="status status-live">В эксплуатации</span>
+  </div>
+  <h3>Платформа взаимопомощи с верифицированными организациями</h3>
+  <p class="project-client">Социальный проект</p>
+  <p>Люди публикуют просьбы о помощи и откликаются на чужие, а верифицированные организации — детские дома, дома престарелых, благотворительные фонды — создают запросы от имени подопечных.</p>
+  <ul class="mini-metrics">
+    <li><b>3</b><span>языка: казахский, русский, английский</span></li>
+    <li><b>4</b><span>типа верифицированных организаций</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Ruby on Rails 8</li>
+    <li>PostgreSQL</li>
+    <li>Hotwire</li>
+    <li>Action Cable</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/code-school/" data-reveal data-card data-industries="edtech devtools" data-text="интерактивная платформа обучения программированию собственный продукт · edtech обучение ruby в формате test-first: студент пишет код в браузере, он выполняется в изолированной песочнице и проверяется автотестами. ruby on rails 8 postgresql hotwire codemirror rspec jwt docker sentry kamal 2 образование инструменты разработки">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 9 12 4 2 9l10 5z"/><path d="M6 11v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/><path d="M22 9v6"/></svg>
+Образование</span>
+    <span class="status status-live">В эксплуатации</span>
+  </div>
+  <h3>Интерактивная платформа обучения программированию</h3>
+  <p class="project-client">Собственный продукт · EdTech</p>
+  <p>Обучение Ruby в формате Test-First: студент пишет код в браузере, он выполняется в изолированной песочнице и проверяется автотестами.</p>
+  <ul class="mini-metrics">
+    <li><b>61</b><span>упражнение в 16 уроках</span></li>
+    <li><b>266</b><span>автотестов платформы</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Ruby on Rails 8</li>
+    <li>PostgreSQL</li>
+    <li>Hotwire</li>
+    <li>CodeMirror</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/payments-mor/" data-reveal data-card data-industries="fintech" data-text="концепция платёжного сервиса для экспортёров it-услуг собственная разработка · финтех-стартап сервис в роли merchant of record: принимает оплату картами и кошельками из 100+ стран и выплачивает выручку в тенге на счёт казахстанской компании — без офшора. merchant of record checkout sdk kyb anti-fraud ml финансы и банки">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 10h19"/><path d="M6.5 15h4"/></svg>
+Финансы</span>
+    <span class="status status-concept">Концепция</span>
+  </div>
+  <h3>Концепция платёжного сервиса для экспортёров IT-услуг</h3>
+  <p class="project-client">Собственная разработка · финтех-стартап</p>
+  <p>Сервис в роли merchant of record: принимает оплату картами и кошельками из 100+ стран и выплачивает выручку в тенге на счёт казахстанской компании — без офшора.</p>
+  <ul class="mini-metrics">
+    <li><b>100+</b><span>стран покупателей</span></li>
+    <li><b>1</b><span>интеграция: чекаут или SDK</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Merchant of Record</li>
+    <li>Checkout SDK</li>
+    <li>KYB</li>
+    <li>Anti-fraud ML</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+      <a class="card project-card" href="/projects/stack-advisor/" data-reveal data-card data-industries="devtools" data-text="интерактивный советник по архитектуре веб-приложений собственный продукт · открытый инструмент статическое веб-приложение: по 12 вопросам о проекте подбирает стек, архитектуру и конфигурацию ruby on rails 8 с обоснованием каждого решения и планом реализации. jekyll liquid javascript yaml github pages инструменты разработки">
+  <div class="project-card-top">
+    <span class="tag"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="m7 9 3 3-3 3"/><path d="M12.5 15H17"/></svg>
+DevTools</span>
+    <span class="status status-live">В эксплуатации</span>
+  </div>
+  <h3>Интерактивный советник по архитектуре веб-приложений</h3>
+  <p class="project-client">Собственный продукт · открытый инструмент</p>
+  <p>Статическое веб-приложение: по 12 вопросам о проекте подбирает стек, архитектуру и конфигурацию Ruby on Rails 8 с обоснованием каждого решения и планом реализации.</p>
+  <ul class="mini-metrics">
+    <li><b>12</b><span>вопросов о проекте</span></li>
+    <li><b>20</b><span>слоёв архитектурных решений</span></li>
+  </ul>
+  <ul class="chips">
+    <li>Jekyll</li>
+    <li>Liquid</li>
+    <li>JavaScript</li>
+    <li>YAML</li>
+  </ul>
+  <span class="card-more">Подробнее <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</span>
+</a>
+
+    </div>
+    <p class="empty-state" data-empty hidden>Ничего не найдено. Попробуйте другой запрос или сбросьте фильтр.</p>
+
+    <div class="note">
+      <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+
+      <p>Названия заказчиков и проектов не раскрываются по условиям конфиденциальности. Подробности, демонстрацию и рекомендации предоставим по запросу после подписания NDA.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta" data-reveal>
+      <div>
+        <h2>Есть задача? Давайте обсудим</h2>
+        <p>Опишите процесс, который хотите автоматизировать, или продукт, который нужно создать. В течение одного рабочего дня ответим с вопросами и предложим формат работы.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary btn-lg" href="/contact/">Обсудить проект <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+</a>
+        <a class="btn btn-ghost btn-lg" href="https://wa.me/77774197502?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 20.5 4.8 16.3A8.5 8.5 0 1 1 8 19.4z"/><path d="M9.2 8.3c-.3 3 3.5 6.8 6.5 6.5l.9-1.5-1.9-1-1 .9c-1.1-.5-2.2-1.6-2.7-2.7l.9-1-1-1.9z"/></svg>
+ WhatsApp</a>
+        <a class="btn btn-ghost btn-lg" href="https://t.me/Ruslanux" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.5 3.5-19 7.3 6.4 2.3 2.3 6.9 3.6-4.3 4.6 3.4z"/><path d="m8.9 13.1 9.1-6.6-6.8 8.4"/></svg>
+ Telegram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  </main>
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="/" aria-label="Zhubanov SoftDev"><svg class="logo-mark" viewBox="0 0 32 32" width="34" height="34" aria-hidden="true" focusable="false">
+  <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="8" fill="#0e1627" stroke="#2cc4e8" stroke-opacity=".4" stroke-width="1.5"/>
+  <path d="M8 9.5h11.5L8.5 21.5H20" fill="none" stroke="#2cc4e8" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="logo-cursor" x="21.5" y="20" width="4.5" height="2.8" rx="1" fill="#f3c24f"/>
+</svg>
+<span class="logo-text"><b>Zhubanov</b><span>SoftDev</span></span>
+</a>
+        <p>Разработка программного обеспечения на заказ и внедрение прикладного искусственного интеллекта.</p>
+        <p class="footer-legal-name">ИП Жубанов Р. Ж. · Уральск, Казахстан</p>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-title">Навигация</h2>
+        <ul>
+          <li><a href="/services/">Услуги</a></li>
+          <li><a href="/industries/">Отрасли</a></li>
+          <li><a href="/projects/">Проекты</a></li>
+          <li><a href="/about/">О компании</a></li>
+          <li><a href="/contact/">Контакты</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-title">Услуги</h2>
+        <ul>
+          <li><a href="/services/#custom">Разработка ПО</a></li>
+          <li><a href="/services/#ai">Прикладной ИИ и LLM</a></li>
+          <li><a href="/services/#automation">Интеграции и автоматизация</a></li>
+          <li><a href="/services/#vision">Данные и компьютерное зрение</a></li>
+          <li><a href="/services/#realtime">ГИС и реальное время</a></li>
+          <li><a href="/services/#discovery">Концепции и прототипы</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-title">Контакты</h2>
+        <ul class="footer-contacts">
+          <li><a href="mailto:zhubanov1090@gmail.com"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+<span>zhubanov1090@gmail.com</span></a></li>
+          <li><a href="tel:+77774197502"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1.1 4.2 2 2 0 0 1 3.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L7.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+<span>+7&nbsp;777&nbsp;419&nbsp;7502</span></a></li>
+          <li><a href="https://wa.me/77774197502" rel="noopener" target="_blank"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 20.5 4.8 16.3A8.5 8.5 0 1 1 8 19.4z"/><path d="M9.2 8.3c-.3 3 3.5 6.8 6.5 6.5l.9-1.5-1.9-1-1 .9c-1.1-.5-2.2-1.6-2.7-2.7l.9-1-1-1.9z"/></svg>
+<span>WhatsApp</span></a></li>
+          <li><a href="https://t.me/Ruslanux" rel="noopener" target="_blank"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m21.5 3.5-19 7.3 6.4 2.3 2.3 6.9 3.6-4.3 4.6 3.4z"/><path d="m8.9 13.1 9.1-6.6-6.8 8.4"/></svg>
+<span>Telegram</span></a></li>
+          <li><span class="footer-plain"><svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+<span>Уральск, Казахстан</span></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Zhubanov SoftDev · ИП Жубанов Р. Ж. · <a href="/privacy/">Политика конфиденциальности</a></p>
+      <p class="footer-note">Названия заказчиков и проектов обезличены по условиям конфиденциальности.</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
