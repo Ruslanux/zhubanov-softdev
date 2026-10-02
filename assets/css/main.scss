@@ -1089,6 +1089,9 @@ a.card:hover .card-more .icon { transform: translateX(3px); }
 .service-related { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: baseline; }
 .service-related .col-title { margin: 0; }
 .service-related a { font-size: 14.5px; font-weight: 500; }
+.service-example { margin-top: 26px; padding: 18px 20px; border-radius: var(--radius-sm); background: var(--accent-soft); border-left: 3px solid var(--accent); }
+.service-example .col-title { margin-bottom: 8px; }
+.service-example p { margin: 0; line-height: 1.6; }
 
 /* ---------- Process ---------- */
 .process {

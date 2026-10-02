@@ -140,7 +140,7 @@
     We bring the system into operation and stay close: we set up infrastructure, automate releases,
     train administrators and users, and provide SLA-based support.
   points:
-    - "Docker, Kamal 2, systemd; Hetzner, the cloud or the client's servers"
+    - "Docker, Kamal 2, systemd; servers in Kazakhstan, the cloud or the client's servers"
     - "Operation in closed networks and without internet access"
     - "CI/CD, automated checks and rollbacks"
     - "TLS, Cloudflare, S3-compatible storage"
@@ -152,6 +152,38 @@
     - "SLA-based support"
     - "Training for administrators and users"
   projects: [instrumentation, counter-uav, code-school]
+
+- id: migration
+  icon: pin
+  short: "Server move to Kazakhstan"
+  title: "Server migration and setup in Kazakhstan"
+  summary: "We move your site, database and files to a server in Kazakhstan — to meet the legal requirement to keep personal data in the country, with no data loss and a short maintenance window."
+  text: >-
+    Kazakhstan's Law on Personal Data and Its Protection requires databases with citizens' personal data
+    to be stored within the country. We move a running system from foreign hosting to a data centre in
+    Kazakhstan: we size the configuration to the real load, set up the server from scratch, transfer the data
+    with verification and switch traffic so that users notice only a short maintenance window.
+  points:
+    - "Measuring the real load and choosing a plan: VDS, IaaS, S3 object storage"
+    - "Server preparation: Docker, Kamal 2, swap, automatic security updates"
+    - "Firewall: web ports open to Cloudflare only, direct access to the server by IP closed"
+    - "Database and file transfer with record reconciliation and a check of every object"
+    - "A rehearsal on a copy of the data, a rollback plan, DNS switchover"
+    - "Database backups to separate storage with its own access keys"
+    - "Privacy policy update: where data is stored and who receives it"
+  deliverables:
+    - "The system running on a server in Kazakhstan"
+    - "Deployment configuration in your repository"
+    - "Daily off-server backups"
+    - "Operations and rollback guide"
+  example: >-
+    Dating platform: the server, database and profile photos moved from an EU data centre to Almaty (SmartCloud).
+    We measured the load on the live server, so we chose a VDS with 2 cores and 2 GB of memory rather than an
+    oversized plan. The database and file transfer was rehearsed in advance and checked by record counts in the key
+    tables and file by file. The site was in maintenance for about 10 minutes and not a single record was lost.
+    Along the way the server was closed to direct requests that bypass Cloudflare, and database backups now go to
+    separate storage every night.
+  projects: [family-platform]
 
 - id: audit
   icon: shield

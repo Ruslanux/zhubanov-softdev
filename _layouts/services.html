@@ -46,6 +46,12 @@ layout: default
             </ul>
           </div>
         </div>
+        {%- if s.example %}
+        <div class="service-example">
+          <h3 class="col-title">{{ t.pages.services.example }}</h3>
+          <p>{{ s.example }}</p>
+        </div>
+        {%- endif %}
         {%- if s.projects %}
         <div class="service-related">
           <h3 class="col-title">{{ t.pages.services.related }}</h3>

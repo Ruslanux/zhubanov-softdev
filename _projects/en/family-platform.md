@@ -38,4 +38,5 @@ results:
 - 'Reliable message delivery: rendered correctly for sender and recipient, without duplicates'
 - Automated tests for models, controllers and chat
 - A deployment guide and a brand book
+- 'Server, database and photos moved to a data centre in Almaty: user data is stored in Kazakhstan, with about 10 minutes of downtime during the move'
 ---

@@ -37,4 +37,4 @@
   items: ["RSpec", "Minitest", "FactoryBot", "Capybara", "Selenium", "Playwright", "pytest", "Vitest", "WebMock", "VCR", "SimpleCov", "RuboCop", "Brakeman", "bundler-audit", "Bullet", "ESLint", "ShellCheck", "bats"]
 - id: devops
   icon: rocket
-  items: ["Docker", "Kamal 2", "Thruster", "Puma", "GitHub Actions", "GitLab CI", "Azure DevOps", "Hetzner", "Cloudflare", "systemd", "Windows Service", "Sentry", "Lograge", "rack-mini-profiler", "GitHub Pages"]
+  items: ["Docker", "Kamal 2", "Thruster", "Puma", "GitHub Actions", "GitLab CI", "Azure DevOps", "SmartCloud", "Cloudflare", "systemd", "Windows Service", "Sentry", "Lograge", "rack-mini-profiler", "GitHub Pages"]
