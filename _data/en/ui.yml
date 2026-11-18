@@ -1,9 +1,8 @@
 meta:
-  tagline: "Custom software and applied AI"
+  tagline: "Industry ERP and AI agents"
   org_description: >-
-    Custom software development and applied artificial intelligence: web services and backend systems,
-    integrations and business-process automation, LLMs and agent pipelines, data processing and computer vision,
-    GIS and real-time systems.
+    Industry ERP systems and AI agents for companies in Kazakhstan, custom software development,
+    integrations with 1C and government systems, business-process automation.
 
 lang:
   short: "Eng"
@@ -21,6 +20,7 @@ nav:
   open: "Open menu"
   close: "Close menu"
   items:
+    - { title: "Products", url: "/products/" }
     - { title: "Services", url: "/services/" }
     - { title: "Industries", url: "/industries/" }
     - { title: "Projects", url: "/projects/" }
@@ -34,7 +34,9 @@ labels:
 cta:
   discuss: "Discuss a project"
   projects: "View projects"
+  products: "View products"
   all_projects: "All projects"
+  all_products: "All products"
   all_services: "All services"
   all_industries: "All industries"
   case: "Read more"
@@ -48,34 +50,39 @@ cta_band:
     We reply within one business day with questions and a proposed engagement format.
 
 hero:
-  eyebrow: "Custom software & applied AI · Kazakhstan"
-  title_html: 'Software and applied AI <span class="grad">that work for your business</span>'
+  eyebrow: "Industry ERP & AI agents · Kazakhstan"
+  title_html: 'Industry ERP and AI agents <span class="grad">that work for your business</span>'
   lead: >-
-    We build web services and backend systems, integrations and automation, LLM and agent-pipeline
-    solutions, computer vision, GIS and real-time systems. Turnkey — from discovery to support.
+    Our own ERP systems for eight industries — from construction and agriculture to mining, energy and logistics —
+    and AI agents that run on top of 1C and government systems. We also build custom software turnkey,
+    from discovery to support.
   tech_label: "Core technologies"
   tech: ["Ruby on Rails", "Python", "Go", "TypeScript", "LLM · agents", "PostgreSQL"]
   console:
     aria: "Pipeline diagram: the model reads the data, code computes numbers and verdicts, an expert approves the result"
     foot: "0 critical findings · trace saved"
     steps:
-      - { code: "ingest", text: "Documents, scans, spreadsheets, models", tag: "PDF · XLSX · IFC", kind: "code" }
+      - { code: "ingest", text: "1C, e-invoices, WhatsApp, documents", tag: "API · XLSX · PDF", kind: "code" }
       - { code: "classify", text: "The model reads and classifies", tag: "LLM", kind: "llm" }
       - { code: "compute", text: "Code computes numbers and verdicts", tag: "engine", kind: "code" }
       - { code: "verify", text: "Self-audit and source checks", tag: "audit", kind: "code" }
       - { code: "approve", text: "An expert approves the result", tag: "human", kind: "human" }
   badges:
-    - { value: "97.5%", label: "night-time license plate accuracy" }
+    - { value: "97.1%", label: "WhatsApp order lines recognized correctly" }
     - { value: "100%", label: "traceability to the source" }
 
 stats_label: "Company in numbers"
 stats:
+  - { key: "erp", suffix: "", label: "industry ERP systems" }
   - { key: "projects", suffix: "", label: "projects in the portfolio" }
-  - { key: "industries", suffix: "", label: "industries and domains" }
   - { value: "2,500+", count: 2500, suffix: "+", label: "automated tests shipped" }
   - { value: "5+", count: 5, suffix: "+", label: "years of commercial development" }
 
 home:
+  products:
+    eyebrow: "Products"
+    title: "Our own products"
+    lead: "Industry ERP systems and AI agents — working prototypes we launch as a pilot on your data."
   services:
     eyebrow: "Services"
     title: "The full development cycle — from idea to operation"
@@ -83,7 +90,7 @@ home:
   industries:
     eyebrow: "Industries"
     title: "We work across every area of digital transformation"
-    lead: "Education, retail, finance, construction, industry, security, government and more."
+    lead: "Construction, mining, oilfield services, energy, agriculture, distribution, logistics, finance, education and more."
   projects:
     eyebrow: "Projects"
     title: "Featured projects"
@@ -104,7 +111,7 @@ approach:
     The model reads and classifies — deterministic code computes the numbers and decisions, and an expert approves
     the result. That is why every number is reproducible and traceable to its source.
   pipeline:
-    - { tag: "input", kind: "code", title: "Data", text: "Documents, scans, spreadsheets, BIM models, video streams, accounting systems." }
+    - { tag: "input", kind: "code", title: "Data", text: "1C and ERP, e-invoicing systems, WhatsApp, contracts, tender documents, scans and spreadsheets." }
     - { tag: "LLM", kind: "llm", title: "The model reads", text: "Extracts facts, classifies, turns requirements into strict schemas." }
     - { tag: "engine", kind: "code", title: "Code computes", text: "Arithmetic, rules and verdicts live in a deterministic engine." }
     - { tag: "human", kind: "human", title: "An expert approves", text: "Ambiguous cases go to a specialist; decisions are recorded." }
@@ -150,7 +157,7 @@ pages:
     eyebrow: "Services"
     title: "What we do"
     lead: >-
-      We develop custom software and implement applied artificial intelligence. We work with Ruby on Rails,
+      We implement our own industry ERP systems and AI agents and develop custom software. We work with Ruby on Rails,
       Python and Go and deliver turnkey projects, including documentation and staff training.
     toc: "Service sections"
     what: "What we do"
@@ -198,23 +205,25 @@ pages:
     eyebrow: "About"
     title: "Zhubanov SoftDev — a full-cycle engineering team"
     lead: >-
-      We build custom software and implement applied artificial intelligence for businesses and the public sector
-      in Kazakhstan and abroad.
+      We build industry ERP systems, AI agents and custom software for businesses and the quasi-public sector
+      in Kazakhstan.
     story:
       - >-
-        Zhubanov SoftDev (Sole Proprietor Zhubanov R. Zh.) is a software development company. We build web services and
-        backend systems, integrations and business-process automation, solutions based on large language models and
-        agent pipelines, data processing, computer vision, geographic information systems and real-time systems.
+        Zhubanov SoftDev (Sole Proprietor Zhubanov R. Zh.) is a software development company. We have our own line of
+        industry ERP systems on a shared core — for construction, agricultural holdings, building-materials plants,
+        oilfield services, mining, energy, distribution and logistics — and AI agents that run on top of 1C, ERP and
+        government systems.
       - >-
         Our portfolio includes education and e-commerce platforms, HR systems with multi-agent AI, fintech solutions,
-        construction and BIM tools, field reference tools for industrial engineers, security and recognition systems,
-        and modules for accounting and government systems.
+        construction and BIM tools, field reference tools for industrial engineers, and modules for accounting and
+        government systems.
       - >-
         We help companies automate routine operations, speed up workflows and make data-driven decisions.
         We deliver turnkey projects — discovery, design, development, testing, deployment and support — including
         documentation and training for the client's staff.
     facts:
       - { label: "Legal form", value: "Sole Proprietor Zhubanov R. Zh." }
+      - { label: "Products", value: "8 industry ERP systems · Qyzmet AI agents" }
       - { label: "Portfolio", value: "%p projects · %i industries", projects: true }
       - { label: "Technology", value: "Ruby on Rails · Python · Go · TypeScript" }
       - { label: "Geography", value: "Kazakhstan and worldwide, remote (UTC+5)" }
@@ -261,6 +270,9 @@ pages:
         - >-
           Working principle: the model reads and classifies, while deterministic code computes the numbers and verdicts —
           with strict call schemas, caching, self-audit and budgets.
+        - >-
+          Since 2016 he has also worked in industrial instrumentation and control design for oil and gas, so he knows how
+          production companies operate from the inside, not just from a specification.
   contact:
     eyebrow: "Contact"
     title: "Tell us about your challenge"
@@ -311,7 +323,7 @@ contact:
   wa_text: "Hello! I would like to discuss a project."
 
 footer:
-  about: "Custom software development and applied artificial intelligence."
+  about: "Industry ERP systems, AI agents and custom software development."
   legal: "Sole Proprietor Zhubanov R. Zh. · Uralsk, Kazakhstan"
   legal_name: "Sole Proprietor Zhubanov R. Zh."
   nav: "Navigation"

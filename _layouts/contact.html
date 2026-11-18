@@ -16,7 +16,8 @@ layout: default
 
 <section class="section">
   <div class="container contact-layout">
-    <form class="card form-card" data-brief-form
+    <form class="card form-card" id="brief" data-brief-form
+          data-demo-text="{{ d.products.labels.demo_text }}"
           data-email="{{ site.contact.email }}"
           data-endpoint="{{ site.forms.endpoint }}"
           data-subject="{{ f.subject }}"

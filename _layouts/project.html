@@ -24,7 +24,7 @@ layout: default
   <div class="container">
     <ol class="breadcrumbs">
       <li><a href="{{ lp | append: '/' | relative_url }}">{{ t.labels.home }}</a></li>
-      <li><a href="{{ projects_url | relative_url }}">{{ t.nav.items[2].title }}</a></li>
+      <li><a href="{{ projects_url | relative_url }}">{{ t.pages.projects.title }}</a></li>
       <li aria-current="page">{{ main_ind.short | default: main_ind.title }}</li>
     </ol>
     <div class="project-meta-top">

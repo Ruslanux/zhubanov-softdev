@@ -7,7 +7,7 @@ industries:
 - govtech
 status: ready
 order: 11
-featured: false
+featured: true
 stack:
 - Ruby on Rails 8
 - PostgreSQL

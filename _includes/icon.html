@@ -1,5 +1,11 @@
 <svg class="icon{% if include.class %} {{ include.class }}{% endif %}" viewBox="0 0 24 24" width="{{ include.px | default: 24 }}" height="{{ include.px | default: 24 }}" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
 {%- case include.name -%}
+{%- when "agro" -%}<path d="M12 21v-9"/><path d="M12 12c0-4 3-7 8-7 0 4-3 7-8 7z"/><path d="M12 15c0-3.3-2.5-6-7-6 0 3.3 2.5 6 7 6z"/><path d="M5 21h14"/>
+{%- when "mining" -%}<path d="M14.5 4.5c3 .5 5.5 3 6 6"/><path d="M3.5 13.5c.5-3 3-5.5 6-6l5 5c-.5 3-3 5.5-6 6z"/><path d="m3 21 7-7"/><path d="m14.5 9.5 3-3"/>
+{%- when "oilgas" -%}<path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/>
+{%- when "trade" -%}<rect x="3" y="11" width="8" height="8" rx="1.2"/><rect x="13" y="11" width="8" height="8" rx="1.2"/><rect x="8" y="3" width="8" height="8" rx="1.2"/>
+{%- when "erp" -%}<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7M17.5 14v7"/>
+{%- when "play" -%}<circle cx="12" cy="12" r="9"/><path d="m10 8.5 5.5 3.5-5.5 3.5z"/>
 {%- when "code" -%}<path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/>
 {%- when "ai" -%}<path d="M11 3.5l1.9 5.1 5.1 1.9-5.1 1.9L11 17.5l-1.9-5.1L4 10.5l5.1-1.9z"/><path d="M18.5 14.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/>
 {%- when "flow" -%}<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M6.5 10v4a3.5 3.5 0 0 0 3.5 3.5h4"/><path d="M17.5 14v-4A3.5 3.5 0 0 0 14 6.5h-4"/>

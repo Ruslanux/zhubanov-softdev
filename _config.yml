@@ -4,9 +4,8 @@
 title: "Zhubanov SoftDev"
 legal_name: "ИП Жубанов Р. Ж."
 description: >-
-  Разработка программного обеспечения на заказ и внедрение прикладного
-  искусственного интеллекта: веб-сервисы, интеграции, LLM-агенты,
-  компьютерное зрение, ГИС и системы реального времени.
+  Отраслевые ERP-системы и ИИ-агенты для компаний Казахстана, разработка
+  программного обеспечения на заказ, интеграции с 1С и госсистемами.
 
 # Язык по умолчанию живёт в корне сайта, остальные — в /kk/ и /en/.
 lang: ru
@@ -45,6 +44,8 @@ plugins:
 collections:
   projects:
     output: true
+  products:
+    output: true
 
 sass:
   style: compressed
@@ -64,6 +65,14 @@ defaults:
     values: { lang: "kk", permalink: "/kk/projects/:name/" }
   - scope: { path: "_projects/en" }
     values: { lang: "en", permalink: "/en/projects/:name/" }
+  - scope: { path: "", type: "products" }
+    values: { layout: "product" }
+  - scope: { path: "_products/ru" }
+    values: { lang: "ru", permalink: "/products/:name/" }
+  - scope: { path: "_products/kk" }
+    values: { lang: "kk", permalink: "/kk/products/:name/" }
+  - scope: { path: "_products/en" }
+    values: { lang: "en", permalink: "/en/products/:name/" }
 
 exclude:
   - Gemfile

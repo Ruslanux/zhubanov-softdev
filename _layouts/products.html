@@ -1,0 +1,89 @@
+---
+layout: default
+---
+{%- include vars.html -%}
+{%- assign pd = d.products -%}
+{%- assign products = site.products | where: "lang", lang | sort: "order" -%}
+{%- assign erps = products | where: "kind", "erp" -%}
+{%- assign agents = products | where: "kind", "agents" -%}
+{%- assign contact_url = lp | append: "/contact/" -%}
+
+<section class="page-hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="container">
+    <p class="eyebrow"><span class="dot"></span>{{ pd.page.eyebrow }}</p>
+    <h1>{{ pd.page.title }}</h1>
+    <p class="lead">{{ pd.page.lead }}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary btn-lg" href="{{ contact_url | relative_url }}">{{ pd.labels.demo_btn }} {% include icon.html name="arrow-right" px=18 %}</a>
+      <a class="btn btn-ghost btn-lg" href="#agents">{{ pd.agents.eyebrow }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="erp">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="dot"></span>{{ pd.erp.eyebrow }}</p>
+      <h2>{{ pd.erp.title }}</h2>
+      <p class="lead">{{ pd.erp.lead }}</p>
+    </header>
+    <ol class="core-chain" data-reveal>
+      {%- for s in pd.erp.chain %}
+      <li><span class="num">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</span>{{ s }}</li>
+      {%- endfor %}
+    </ol>
+    <div class="grid grid-products">
+      {%- for p in erps %}
+      {% include product-card.html product=p compact=true %}
+      {%- endfor %}
+    </div>
+
+    <h3 class="subhead">{{ pd.erp.core_title }}</h3>
+    <div class="grid grid-core">
+      {%- for c in pd.erp.core %}
+      <div class="core-item" data-reveal>
+        <span class="card-icon">{% include icon.html name=c.icon px=20 %}</span>
+        <div>
+          <h4>{{ c.title }}</h4>
+          <p>{{ c.text }}</p>
+        </div>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="agents">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="dot"></span>{{ pd.agents.eyebrow }}</p>
+      <h2>{{ pd.agents.title }}</h2>
+      <p class="lead">{{ pd.agents.lead }}</p>
+    </header>
+    {%- for p in agents %}
+    {% include product-card.html product=p wide=true %}
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section" id="pilot">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="dot"></span>{{ pd.pilot.eyebrow }}</p>
+      <h2>{{ pd.pilot.title }}</h2>
+      <p class="lead">{{ pd.pilot.lead }}</p>
+    </header>
+    <ol class="process process-4">
+      {%- for s in pd.pilot.steps %}
+      <li class="process-step" data-reveal>
+        <span class="num">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</span>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.text }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+{% include cta.html %}

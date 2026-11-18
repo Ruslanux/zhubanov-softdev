@@ -1,0 +1,28 @@
+{%- comment -%}
+  Карточка продукта: скриншот, отрасль, название, слоган и 2–3 ключевых возможности.
+  include.product — документ из коллекции products; include.wide — широкая карточка (ИИ-агенты).
+{%- endcomment -%}
+{%- assign p = include.product -%}
+{%- assign pd = d.products -%}
+{%- assign pind = d.industries | where: "id", p.industries[0] | first -%}
+{%- capture card_img %}/assets/img/products/{{ p.slug }}/card.jpg{% endcapture -%}
+<a class="card product-card{% if include.wide %} product-card-wide{% endif %}" href="{{ p.url | relative_url }}" data-reveal>
+  <div class="product-shot">
+    <img src="{{ card_img | relative_url }}" alt="{{ p.title | escape }} — {{ p.tagline | escape }}" width="800" height="500" loading="lazy" decoding="async">
+  </div>
+  <div class="product-card-body">
+    <div class="project-card-top">
+      <span class="tag">{% if p.kind == "agents" %}{% include icon.html name="ai" px=16 %}{% else %}{% include icon.html name=pind.icon px=16 %}{% endif %}{{ p.sector | escape }}</span>
+      {%- unless include.compact %}<span class="status status-pilot">{{ pd.labels.status }}</span>{% endunless %}
+    </div>
+    <h3>{{ p.title | escape }}</h3>
+    <p class="project-client">{{ p.tagline | escape }}</p>
+    {%- if include.wide %}<p>{{ p.lead | escape }}</p>{% endif %}
+    <ul class="chips">
+      {%- for h in p.highlights %}
+      <li>{{ h | escape }}</li>
+      {%- endfor %}
+    </ul>
+    <span class="card-more">{{ pd.labels.more }} {% include icon.html name="arrow-right" px=16 %}</span>
+  </div>
+</a>

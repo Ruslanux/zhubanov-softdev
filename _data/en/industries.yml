@@ -1,26 +1,88 @@
-- id: edtech
-  icon: edtech
-  tag: "EdTech"
-  short: "Education"
-  title: "Education"
-  text: "Platforms for learning centers, schools and universities: user dashboards, course content, assessment and AI assistants for teachers."
+- id: construction
+  icon: construction
+  tag: "ConTech · BIM"
+  short: "Construction"
+  title: "Construction and BIM"
+  text: "ERP for construction companies and AI tools for designers: estimates and site budgets, model checking, tracking of completed quantities."
   capabilities:
-    - "Student, parent, teacher and administrator dashboards"
-    - "AI generation of lessons, tests and homework"
-    - "Live lessons, placement tests and gamification"
-    - "Tuition payments, lead CRM and analytics"
+    - "ERP: foreman requests checked against the estimate, site budget vs. actual"
+    - "BIM model checks against corporate standards"
+    - "A requirements register and a graph of regulatory links"
+    - "Linking estimates and completion certificates to model elements"
+    - "BCF export of issues for Revit, Navisworks and Solibri"
 
-- id: ecommerce
-  icon: ecommerce
-  tag: "E-commerce"
-  short: "E-commerce"
-  title: "E-commerce"
-  text: "Marketplaces and online stores for the Kazakhstan market — with sellers, commissions, promotions and local payment systems."
+- id: industry
+  icon: industry
+  tag: "Industry 4.0"
+  short: "Industry"
+  title: "Industry and energy"
+  text: "ERP for plants and energy companies, and tools for engineers that work on site — including without connectivity."
   capabilities:
-    - "Multi-vendor marketplaces and seller dashboards"
-    - "Payments via Kaspi, Halyk Epay and Freedom"
-    - "Commission and promotion engines"
-    - "Search, catalogs, product import and export, PWA"
+    - "ERP: output by grade, consumption norms per tonne, weighbridge"
+    - "CHP fuel balance and grid losses"
+    - "Engineering calculators and references: instrumentation, SIL, explosion protection"
+    - "Offline applications with synchronization"
+    - "PDF protocols and shared site instrument databases"
+
+- id: mining
+  icon: mining
+  tag: "Mining"
+  short: "Mining"
+  title: "Mining and metallurgy"
+  text: "Accounting for mining companies: production with metal grade, metallurgical balance, weighbridge, permits and shift rotation."
+  capabilities:
+    - "Shift reports with metal grade"
+    - "Metallurgical balance and losses above target recovery"
+    - "Pit reports vs. plant weighbridge"
+    - "Permits, blaster book and shift rotation"
+
+- id: oilgas
+  icon: oilgas
+  tag: "Oil · Gas"
+  short: "Oil and gas"
+  title: "Oilfield services, oil and gas"
+  text: "Accounting for oilfield service companies: operator contracts, daily reports and downtime, permits and shift rotation, local content."
+  capabilities:
+    - "Daily rig reports with non-productive time (NPT)"
+    - "Operator billing at contract rates"
+    - "Personnel permits and permit-checked rotation"
+    - "Local content for goods and staff"
+
+- id: agro
+  icon: agro
+  tag: "AgriTech"
+  short: "Agriculture"
+  title: "Agriculture"
+  text: "Accounting for agricultural holdings: fields and harvest, crop budget per hectare, grain weighbridge, machinery and fuel."
+  capabilities:
+    - "Fields, field operations and yield plan vs. actual"
+    - "Crop technology map as the budget, cost per hectare and tonne"
+    - "Weighbridge: credited weight, moisture, impurities, deviations"
+    - "Diesel reconciliation against machine norms"
+
+- id: trade
+  icon: trade
+  tag: "Distribution"
+  short: "Distribution"
+  title: "Trade and distribution"
+  text: "Accounting for distributors and wholesalers, plus AI agents for sales and accounting."
+  capabilities:
+    - "Credit control and shipment stop"
+    - "Batches, shelf life and FEFO for retail chains"
+    - "E-invoices, product marking, reconciliation statements and retro bonuses"
+    - "WhatsApp order intake by an AI agent"
+
+- id: logistics
+  icon: logistics
+  tag: "Logistics"
+  short: "Logistics"
+  title: "Transport and logistics"
+  text: "ERP for carriers and forwarders: orders, trips, driver permits, downtime and e-waybills, plus warehouse and procurement."
+  capabilities:
+    - "Transport orders with margin and credit control"
+    - "Trips, driver permits and downtime with the party at fault"
+    - "E-waybills (ESUTD) and e-invoices"
+    - "Warehouse accounting, requests and procurement"
 
 - id: fintech
   icon: fintech
@@ -34,6 +96,18 @@
     - "Payment services and anti-fraud"
     - "Reporting traced back to source data"
 
+- id: edtech
+  icon: edtech
+  tag: "EdTech"
+  short: "Education"
+  title: "Education"
+  text: "Platforms for learning centers, schools and universities: user dashboards, course content, assessment and AI assistants for teachers."
+  capabilities:
+    - "Student, parent, teacher and administrator dashboards"
+    - "AI generation of lessons, tests and homework"
+    - "Live lessons, placement tests and gamification"
+    - "Tuition payments, lead CRM and analytics"
+
 - id: hrtech
   icon: hrtech
   tag: "HR Tech"
@@ -46,6 +120,42 @@
     - "Learning and skills-gap analysis"
     - "Engagement surveys and compliance monitoring"
 
+- id: ecommerce
+  icon: ecommerce
+  tag: "E-commerce"
+  short: "E-commerce"
+  title: "E-commerce"
+  text: "Marketplaces and online stores for the Kazakhstan market — with sellers, commissions, promotions and local payment systems."
+  capabilities:
+    - "Multi-vendor marketplaces and seller dashboards"
+    - "Payments via Kaspi, Halyk Epay and Freedom"
+    - "Commission and promotion engines"
+    - "Search, catalogs, product import and export, PWA"
+
+- id: operations
+  icon: operations
+  tag: "ERP · Operations"
+  short: "Operations"
+  title: "Operations management"
+  text: "AI assistants and automation for maintenance, manufacturing and service companies."
+  capabilities:
+    - "AI assistants over company data and documents"
+    - "Control of deadlines, statuses and execution"
+    - "Procurement, warehouse and payment approvals"
+    - "Management reporting"
+
+- id: govtech
+  icon: govtech
+  tag: "GovTech"
+  short: "Government"
+  title: "Public sector"
+  text: "Modules for government and state-owned organizations: document workflows, portals and services with e-signatures."
+  capabilities:
+    - "Legally binding document workflows with e-signatures"
+    - "Corporate portals and user dashboards"
+    - "Tax and accounting reporting sections"
+    - "Closed-network operation under information-security requirements"
+
 - id: healthtech
   icon: healthtech
   tag: "HealthTech"
@@ -57,30 +167,6 @@
     - "Electronic medical records and laboratory integrations"
     - "AI assistants for handling requests and documents"
     - "Telemedicine, notifications and utilization analytics"
-
-- id: construction
-  icon: construction
-  tag: "ConTech · BIM"
-  short: "Construction"
-  title: "Construction and BIM"
-  text: "AI tools for design and construction companies: model checking, a requirements base and tracking of completed quantities."
-  capabilities:
-    - "BIM model checks against corporate standards"
-    - "A requirements register and a graph of regulatory links"
-    - "Linking estimates and completion certificates to model elements"
-    - "BCF export of issues for Revit, Navisworks and Solibri"
-
-- id: industry
-  icon: industry
-  tag: "Industry 4.0"
-  short: "Industry"
-  title: "Industry and energy"
-  text: "Tools for engineers and field personnel that work on site — including without connectivity."
-  capabilities:
-    - "Engineering calculators and references: instrumentation, SIL, explosion protection"
-    - "Offline applications with synchronization"
-    - "Equipment tag recognition"
-    - "PDF protocols and shared site instrument databases"
 
 - id: security
   icon: security
@@ -106,18 +192,6 @@
     - "Integration with barriers and SaaS platforms via API"
     - "Passage logs and operator hints"
 
-- id: govtech
-  icon: govtech
-  tag: "GovTech"
-  short: "Government"
-  title: "Public sector"
-  text: "Modules for government and state-owned organizations: document workflows, portals and services with e-signatures."
-  capabilities:
-    - "Legally binding document workflows with e-signatures"
-    - "Corporate portals and user dashboards"
-    - "Tax and accounting reporting sections"
-    - "Closed-network operation under information-security requirements"
-
 - id: social
   icon: social
   tag: "Social · NGO"
@@ -129,30 +203,6 @@
     - "Real-time chats and notifications"
     - "Moderation, reports and reputation"
     - "Multilingual interfaces and regional filters"
-
-- id: operations
-  icon: operations
-  tag: "ERP · Operations"
-  short: "Operations"
-  title: "Operations management"
-  text: "AI assistants and automation for maintenance, manufacturing and service companies."
-  capabilities:
-    - "AI assistants over company data and documents"
-    - "Control of deadlines, statuses and execution"
-    - "Procurement, warehouse and payment approvals"
-    - "Management reporting"
-
-- id: logistics
-  icon: logistics
-  tag: "Logistics"
-  short: "Logistics"
-  title: "Logistics and warehousing"
-  text: "Tracking of goods movement, procurement and deliveries with automation of routine operations."
-  capabilities:
-    - "Warehouse accounting and inventory movements"
-    - "Requests, procurement and supplier management"
-    - "Integrations with accounting systems"
-    - "Status tracking and notifications"
 
 - id: devtools
   icon: devtools

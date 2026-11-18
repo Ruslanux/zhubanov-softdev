@@ -7,7 +7,7 @@ industries:
 - logistics
 status: ready
 order: 10
-featured: false
+featured: true
 stack:
 - Ruby on Rails 8.1
 - RubyLLM

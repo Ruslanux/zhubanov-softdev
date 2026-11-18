@@ -2,6 +2,18 @@
   a: >-
     It depends on the scope. A prototype or MVP takes from a few weeks; a full platform from two to three months.
     After discovery we provide an estimate with stages and acceptance points.
+- q: "Can we see your ERP before signing a contract?"
+  a: >-
+    Yes. We show a working prototype online on demo data from your industry. After discovery we run a pilot on one site,
+    warehouse or branch with your reference data and records.
+- q: "Does your ERP replace 1C?"
+  a: >-
+    No. Accounting and tax records stay in 1C, while the ERP covers the operational side of your industry — requests and
+    approvals, warehouse, weighbridge, rotation, reports, norms and budgets — and passes the data to 1C.
+- q: "How do the AI agents work with our data?"
+  a: >-
+    An agent connects to your 1C, ERP or WhatsApp Business via API and prepares a draft that cites its source; an employee
+    makes the decision. The model runs in the cloud or as an open-weight LLM in your environment if data must not leave it.
 - q: "How is the engagement formalized?"
   a: >-
     A contract with Sole Proprietor Zhubanov R. Zh., a specification, a schedule and stage completion certificates.

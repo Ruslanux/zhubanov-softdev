@@ -1,3 +1,51 @@
+- id: erp
+  icon: erp
+  short: "Industry ERP"
+  title: "Industry ERP implementation"
+  summary: "Our own ERP for construction, agriculture, plants, oilfield services, mining, energy, distribution and logistics — from demo to a pilot on your data."
+  text: >-
+    We have a ready line of industry ERP systems on a shared core: request, approval, procurement, warehouse and budget
+    vs. actual, plus the modules of your industry. So we never start from scratch: we show a working prototype, adapt it
+    to your processes and run a pilot on one site, warehouse or branch.
+  points:
+    - "Requests from phones checked against the estimate or budget, with approval above the limit"
+    - "Procurement, warehouse, budget vs. actual, timesheets, machinery and fuel"
+    - "Industry modules: weighbridge, rotation and permits, metallurgical and fuel balances, shelf life, trips"
+    - "Kazakh and Russian interface, a mobile version for foremen and supervisors"
+    - "Integrations with 1C, e-invoicing, e-waybills and digital signatures; deployment on your servers"
+    - "Migration of reference data and balances from Excel and 1C"
+  deliverables:
+    - "A system configured for your processes and roles"
+    - "Pilot results and a test protocol"
+    - "Staff training and role-based instructions"
+    - "Support and further development under contract"
+  products: [qurylys-erp, dala-erp, zauyt-erp, munai-erp, ken-erp, quat-erp, sauda-erp, jol-erp]
+
+- id: ai
+  icon: ai
+  short: "AI agents"
+  title: "AI agents and applied artificial intelligence"
+  summary: "AI agents — digital employees on top of 1C, ERP and WhatsApp: e-invoice reconciliation, order intake, candidate screening, tender analysis."
+  text: >-
+    We embed large language models where they deliver measurable value. The model reads and classifies, while code
+    computes the numbers, rules and verdicts — so results are reproducible, traceable and verifiable.
+  points:
+    - "AI accountant, WhatsApp order manager, AI recruiter, tender documentation agent"
+    - "Multi-agent systems: a coordinator and specialized agents"
+    - "In-product AI assistants that call your system's functions and respect permissions"
+    - "Fact extraction from contracts, estimates, certificates, scans and spreadsheets, including vision models"
+    - "Strict JSON Schema output contracts, self-audit and tracing"
+    - "Quality evaluation: control sets, precision and recall"
+    - "Caching, token budgets and model choice: Claude, DeepSeek, Kimi"
+    - "Claude Code, Claude Agent SDK and MCP: agents that work with your code, data and tools"
+  deliverables:
+    - "A working pipeline or a module inside your system"
+    - "A control set and a test report"
+    - "A description of the method and its limits"
+    - "An estimate of operating costs"
+  products: [qyzmet]
+  projects: [hr-agents, covenant-agent, ops-assistants, qa-agent, requirements-graph]
+
 - id: custom
   icon: code
   short: "Custom software"
@@ -20,41 +68,20 @@
     - "The application deployed on your servers or in the cloud"
   projects: [edu-center, marketplace, family-platform, mutual-aid]
 
-- id: ai
-  icon: ai
-  short: "Applied AI and LLMs"
-  title: "Applied artificial intelligence and LLM agents"
-  summary: "Agent pipelines, AI assistants, document data extraction and content generation — with quality and cost control."
-  text: >-
-    We embed large language models where they deliver measurable value. The model reads and classifies, while code
-    computes the numbers, rules and verdicts — so results are reproducible, traceable and verifiable.
-  points:
-    - "Multi-agent systems: a coordinator and specialized agents"
-    - "In-product AI assistants that call your system's functions and respect permissions"
-    - "Fact extraction from PDFs, scans and spreadsheets, including vision models"
-    - "Strict JSON Schema output contracts, self-audit and tracing"
-    - "Quality evaluation: control sets, precision and recall"
-    - "Caching, token budgets and model choice: Claude, DeepSeek, Kimi"
-    - "Claude Code, Claude Agent SDK and MCP: agents that work with your code, data and tools"
-  deliverables:
-    - "A working pipeline or a module inside your system"
-    - "A control set and a test report"
-    - "A description of the method and its limits"
-    - "An estimate of operating costs"
-  projects: [hr-agents, covenant-agent, ops-assistants, qa-agent, requirements-graph]
-
 - id: automation
   icon: flow
   short: "Integrations and automation"
   title: "Integrations and business-process automation"
-  summary: "We connect accounting systems, payments, e-signatures and messengers — and remove manual data entry and duplicate work."
+  summary: "We connect 1C, ERP, e-invoicing, e-waybills, payments, digital signatures and messengers — and remove manual data entry and duplicate work."
   text: >-
     We automate routine operations and connect disparate systems into a single process — with an exchange log,
     automatic retries and clear statuses for employees.
   points:
     - "Integrations with 1C, CRM, ERP and in-house systems"
     - "Kaspi, Halyk Epay and Freedom payment gateways with idempotent webhook handling"
-    - "Electronic document workflows and digital signatures"
+    - "Government systems: e-invoices and goods transport documents (ESF, SNT), e-waybills (ESUTD), product marking (IS MPT)"
+    - "Electronic document workflows and digital signatures via NCALayer"
+    - "WhatsApp Business and Telegram: orders, notifications, replies to customers"
     - "Notifications: email, web push, Slack, Microsoft Teams"
     - "Background and scheduled jobs: reports, reconciliations, mailings"
     - "CI/CD integrations: GitHub Actions, GitLab CI, Azure DevOps"
@@ -64,50 +91,6 @@
     - "Recovery procedures"
     - "Instructions for staff"
   projects: [reconciliation, marketplace, qa-agent]
-
-- id: vision
-  icon: scan
-  short: "Data and computer vision"
-  title: "Data processing and computer vision"
-  summary: "License plate recognition, OCR, parsing of estimates and BIM models, analytics and reporting."
-  text: >-
-    We turn video, photos, scans, spreadsheets and engineering models into structured data you can work with.
-    Models run on ordinary CPUs — no cloud and no expensive hardware required.
-  points:
-    - "Object and text recognition in video, including at night on ordinary IP cameras"
-    - "OCR for documents and equipment tags, validated against reference data"
-    - "BIM (IFC): model checks, quantity linking, 3D viewing"
-    - "Parsing of estimates, completion certificates and registers from XLSX and PDF"
-    - "CPU models without the cloud: ONNX Runtime, OpenCV"
-    - "Dashboards, analytics, Excel exports and PDF reports"
-  deliverables:
-    - "A model or a processing pipeline"
-    - "Metrics on a control set"
-    - "An API for integration"
-    - "A Docker image for deployment"
-  projects: [night-anpr, bim-standards, bim-volumes, instrumentation]
-
-- id: realtime
-  icon: map
-  short: "GIS and real-time"
-  title: "Geographic information systems and real-time systems"
-  summary: "24/7 monitoring and control of distributed sites, offline maps, triangulation and operator workstations."
-  text: >-
-    We build systems that run around the clock and do not depend on the internet: monitoring centers,
-    agents on remote nodes, maps in a closed network and operator workstations.
-  points:
-    - "Monitoring and control centers for networks of remote systems and sensors"
-    - "Offline GIS: a local map server, zones and tracks"
-    - "Node agents with buffering and an autonomous mode when the link is lost"
-    - "Multi-window operator workstations with color and audio alerts"
-    - "Incident logs, event playback and reports"
-    - "24/7 operation, self-recovery and role-based access"
-  deliverables:
-    - "Server and agents for Windows and Linux"
-    - "Installers: Windows service, systemd, Docker"
-    - "Administrator and operator guides"
-    - "Interface protocol and API documentation"
-  projects: [counter-uav, night-anpr]
 
 - id: discovery
   icon: layers
@@ -151,7 +134,7 @@
     - "Deployment and recovery instructions"
     - "SLA-based support"
     - "Training for administrators and users"
-  projects: [instrumentation, counter-uav, code-school]
+  projects: [instrumentation, code-school]
 
 - id: migration
   icon: pin

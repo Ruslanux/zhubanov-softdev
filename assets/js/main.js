@@ -215,6 +215,14 @@
   /* ---------- Бриф: отправка на endpoint (Cloudflare Worker) или, если его нет, письмом ---------- */
   var form = document.querySelector("[data-brief-form]");
   if (form) {
+    // Кнопка «Запросить демо» на странице продукта ведёт сюда с ?product=… — подставляем текст в бриф.
+    try {
+      var product = new URLSearchParams(window.location.search).get("product");
+      var message = form.querySelector('[name="message"]');
+      if (product && message && !message.value && form.dataset.demoText) {
+        message.value = form.dataset.demoText.replace("{product}", product.slice(0, 60));
+      }
+    } catch (e) {}
     var status = form.querySelector("[data-form-status]");
     function setStatus(text, kind) {
       status.textContent = text;

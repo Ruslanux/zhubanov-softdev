@@ -1,0 +1,163 @@
+---
+layout: default
+---
+{%- include vars.html -%}
+{%- assign pd = d.products -%}
+{%- assign products = site.products | where: "lang", lang | sort: "order" -%}
+{%- assign products_url = lp | append: "/products/" -%}
+{%- assign contact_url = lp | append: "/contact/" -%}
+{%- capture demo_url %}{{ contact_url | relative_url }}?product={{ page.title | uri_escape }}#brief{% endcapture -%}
+{%- capture img_dir %}/assets/img/products/{{ page.slug }}/{% endcapture -%}
+{%- assign hero_shot = page.shots | first -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "inLanguage": ["kk", "ru"],
+  "url": {{ page.url | absolute_url | jsonify }},
+  "image": {{ img_dir | append: hero_shot.src | absolute_url | jsonify }},
+  "creator": { "@type": "Organization", "name": {{ site.title | jsonify }}, "url": {{ "/" | absolute_url | jsonify }} }
+}
+</script>
+
+<section class="page-hero product-hero">
+  <div class="page-hero-bg" aria-hidden="true"></div>
+  <div class="container">
+    <ol class="breadcrumbs">
+      <li><a href="{{ lp | append: '/' | relative_url }}">{{ t.labels.home }}</a></li>
+      <li><a href="{{ products_url | relative_url }}">{{ pd.page.eyebrow }}</a></li>
+      <li aria-current="page">{{ page.title }}</li>
+    </ol>
+    <div class="project-meta-top">
+      <span class="chip">{{ page.sector }}</span>
+      <span class="status status-pilot">{{ pd.labels.status }}</span>
+    </div>
+    <p class="eyebrow"><span class="dot"></span>{{ page.tagline }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="lead">{{ page.lead }}</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary btn-lg" href="{{ demo_url }}">{{ pd.labels.demo_btn }} {% include icon.html name="arrow-right" px=18 %}</a>
+      <a class="btn btn-ghost btn-lg" href="{{ products_url | relative_url }}">{{ pd.labels.all }}</a>
+    </div>
+    <figure class="screen screen-hero" data-reveal>
+      <div class="screen-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+      <a href="{{ img_dir | append: hero_shot.src | relative_url }}" target="_blank" rel="noopener" aria-label="{{ pd.labels.open_image }}">
+        <img src="{{ img_dir | append: hero_shot.src | relative_url }}" alt="{{ hero_shot.caption | escape }}" width="1600" height="1000" fetchpriority="high">
+      </a>
+      <figcaption>{{ hero_shot.caption }}</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="dot"></span>{{ pd.labels.pains }}</p>
+      <h2>{{ page.tagline }}</h2>
+    </header>
+    <ul class="pain-list">
+      {%- for x in page.pains %}
+      <li data-reveal>{% include icon.html name="target" px=20 %}<span>{{ x }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="dot"></span>{% if page.kind == "agents" %}{{ pd.labels.agents }}{% else %}{{ pd.labels.modules }}{% endif %}</p>
+      <h2>{{ page.title }}</h2>
+    </header>
+    <div class="grid {% if page.kind == 'agents' %}grid-2{% else %}grid-3{% endif %}">
+      {%- for m in page.modules %}
+      <div class="card module-card" data-reveal>
+        <h3>{{ m.title }}</h3>
+        <p>{{ m.text }}</p>
+        {%- if m.value %}
+        <div class="module-metric"><b>{{ m.value }}</b><span>{{ m.label }}</span></div>
+        {%- endif %}
+      </div>
+      {%- endfor %}
+      {%- if page.kind == "erp" %}
+      <div class="card module-card module-core" data-reveal>
+        <h3>{{ pd.labels.core }}</h3>
+        <p>{{ pd.labels.core_note }}</p>
+        <a class="card-more" href="{{ products_url | append: '#erp' | relative_url }}">{{ pd.erp.core_title }} {% include icon.html name="arrow-right" px=16 %}</a>
+      </div>
+      {%- endif %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow"><span class="dot"></span>{{ pd.labels.screens }}</p>
+      <h2>{{ page.title }}</h2>
+      <p class="lead">{{ page.demo }}</p>
+    </header>
+    <div class="screens{% if page.kind == 'agents' %} screens-even{% endif %}">
+      {%- for s in page.shots offset: 1 %}
+      {%- assign src = img_dir | append: s.src %}
+      <figure class="screen{% if forloop.last and page.kind == 'erp' %} screen-phone{% endif %}" data-reveal>
+        <div class="screen-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+        <a href="{{ src | relative_url }}" target="_blank" rel="noopener" aria-label="{{ pd.labels.open_image }}">
+          <img src="{{ src | relative_url }}" alt="{{ s.caption | escape }}" loading="lazy" decoding="async">
+        </a>
+        <figcaption>{{ s.caption }}</figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container grid grid-2">
+    <div class="card" data-reveal>
+      <span class="card-icon">{% include icon.html name="user-check" %}</span>
+      <h3>{{ pd.labels.roles }}</h3>
+      <ul class="chips chips-lg">
+        {%- for r in page.roles %}<li>{{ r }}</li>{% endfor %}
+      </ul>
+    </div>
+    <div class="card" data-reveal>
+      <span class="card-icon gold">{% include icon.html name="rocket" %}</span>
+      <h3>{{ pd.labels.pilot }}</h3>
+      <ul class="check-list">
+        {%- for x in page.pilot %}<li>{{ x }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{%- comment -%} Другие ERP — по кругу, начиная со следующей за текущей. {%- endcomment -%}
+{%- assign erp_all = products | where: "kind", "erp" %}
+{%- assign cur = -1 %}
+{%- for p in erp_all %}{% if p.url == page.url %}{% assign cur = forloop.index0 %}{% endif %}{% endfor %}
+{%- assign start = cur | plus: 1 %}
+{%- assign others = erp_all | slice: start, 8 %}
+{%- if cur > 0 %}{% assign before = erp_all | slice: 0, cur %}{% assign others = others | concat: before %}{% endif %}
+<section class="section">
+  <div class="container">
+    <header class="section-head section-head-row">
+      <div>
+        <p class="eyebrow"><span class="dot"></span>{{ pd.erp.eyebrow }}</p>
+        <h2>{% if page.kind == "erp" %}{{ pd.labels.other_erp }}{% else %}{{ pd.erp.title }}{% endif %}</h2>
+      </div>
+      <a class="text-link" href="{{ products_url | relative_url }}">{{ pd.labels.all }} {% include icon.html name="arrow-right" px=18 %}</a>
+    </header>
+    <div class="grid grid-products">
+      {%- for p in others limit: 4 %}
+      {% include product-card.html product=p compact=true %}
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{% include cta.html %}

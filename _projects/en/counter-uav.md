@@ -6,7 +6,7 @@ industries:
 - security
 status: ready
 order: 4
-featured: true
+featured: false
 stack:
 - Go
 - WebSocket

@@ -18,7 +18,7 @@
   "address": { "@type": "PostalAddress", "addressLocality": {{ t.contact.city | jsonify }}, "addressCountry": "KZ" },
   "areaServed": ["KZ", "Worldwide"],
   "knowsLanguage": ["kk", "ru", "en"],
-  "knowsAbout": ["Custom software development", "Applied AI", "Large language models", "Ruby on Rails", "Python", "Go", "Computer vision", "GIS", "Business process automation"]
+  "knowsAbout": ["Enterprise resource planning", "Industry ERP systems", "AI agents", "Large language models", "Custom software development", "1C integration", "Business process automation", "Ruby on Rails", "Python"]
   {%- assign same_as = "" | split: "" %}
   {%- if site.contact.telegram != "" %}{% assign tg = "https://t.me/" | append: site.contact.telegram %}{% assign same_as = same_as | push: tg %}{% endif %}
   {%- assign ld_certs = site.data.certificates | where: "published", true %}

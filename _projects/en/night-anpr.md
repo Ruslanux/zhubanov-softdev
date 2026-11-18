@@ -7,7 +7,7 @@ industries:
 - security
 status: pilot
 order: 5
-featured: true
+featured: false
 stack:
 - Python
 - PyTorch

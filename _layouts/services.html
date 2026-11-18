@@ -3,6 +3,7 @@ layout: default
 ---
 {%- include vars.html -%}
 {%- assign projects = site.projects | where: "lang", lang | sort: "order" -%}
+{%- assign products = site.products | where: "lang", lang | sort: "order" -%}
 
 <section class="page-hero">
   <div class="page-hero-bg" aria-hidden="true"></div>
@@ -50,6 +51,15 @@ layout: default
         <div class="service-example">
           <h3 class="col-title">{{ t.pages.services.example }}</h3>
           <p>{{ s.example }}</p>
+        </div>
+        {%- endif %}
+        {%- if s.products %}
+        <div class="service-related">
+          <h3 class="col-title">{{ d.products.labels.services_link }}</h3>
+          {%- for slug in s.products %}
+          {%- assign pr = products | where: "slug", slug | first %}
+          {%- if pr %}<a href="{{ pr.url | relative_url }}">{{ pr.title }}</a>{% endif %}
+          {%- endfor %}
         </div>
         {%- endif %}
         {%- if s.projects %}

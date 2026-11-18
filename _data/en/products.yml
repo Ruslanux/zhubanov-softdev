@@ -1,0 +1,63 @@
+# Products section: shared texts for the overview page and product pages.
+# The products themselves live in _products/<lang>/<slug>.md (file name = page URL).
+
+page:
+  eyebrow: "Products"
+  title: "Our own products"
+  lead: >-
+    Industry ERP systems on a shared core and AI agents. Each product is a working prototype on demo data:
+    we show it online and run a pilot on your data.
+
+erp:
+  eyebrow: "Industry ERP"
+  title: "Eight industries — one proven core"
+  lead: >-
+    Requests, approvals, procurement, warehouse and budget work the same way in every edition, while the industry modules
+    speak the language of your operations: weighbridge, shift rotation and permits, metallurgical and fuel balances, shelf life.
+  chain: ["Request", "Approval", "Purchase order", "Warehouse", "Budget vs. actual"]
+  core_title: "Included in every edition"
+  core:
+    - { icon: flow, title: "Requests and approvals", text: "A request from a phone is checked against the estimate or budget; over budget — approval only with a justification." }
+    - { icon: ecommerce, title: "Procurement and warehouse", text: "Purchase order, receipt, payment; stock at average cost; you cannot write off more than is in stock." }
+    - { icon: gauge, title: "Budget vs. actual", text: "Budget from Excel, commitments and actuals by line, deviations on the director's dashboard." }
+    - { icon: user-check, title: "Staff and machinery", text: "Timesheets, permits, machine hours and fuel against norms." }
+    - { icon: doc, title: "Reports and exports", text: "Role dashboards, print and PDF reports, Excel, exports for 1C." }
+    - { icon: globe, title: "Kazakh and Russian", text: "Interface and notifications in each employee's language, a mobile version for phones." }
+    - { icon: lock, title: "Your environment", text: "No external fonts or CDNs: runs on your servers and in a closed network." }
+    - { icon: check-circle, title: "Covered by tests", text: "End-to-end scenarios from request to budget are checked by automated tests." }
+
+agents:
+  eyebrow: "AI agents"
+  title: "Digital employees on top of your accounting system"
+  lead: >-
+    An agent takes over the routine part of a process — reconciliation, order intake, candidate screening, tender
+    analysis — and prepares a draft that cites its source. An employee makes the decision.
+
+pilot:
+  eyebrow: "How to start"
+  title: "From demo to rollout in four steps"
+  lead: "Every step ends with a clear result you accept before we move on."
+  steps:
+    - { title: "Demo", text: "We show the product online on scenarios from your industry and answer your questions." }
+    - { title: "Discovery", text: "We review processes, documents and roles, and prepare the specification, estimate and pilot targets." }
+    - { title: "Pilot", text: "We launch on one site, warehouse or branch with your reference data and records." }
+    - { title: "Rollout", text: "Integrations with 1C, e-invoicing, e-waybills and digital signatures, staff training, support." }
+
+labels:
+  status: "Prototype · ready for pilot"
+  demo_btn: "Request a demo"
+  more: "Learn more"
+  all: "All products"
+  pains: "What it solves"
+  modules: "Industry modules"
+  agents: "Agents"
+  core: "Shared ERP core"
+  core_note: "Requests, procurement, warehouse, budget, timesheets, reports and exports are shared by every industry ERP."
+  roles: "Who it is for"
+  screens: "Screens"
+  pilot: "What we add in the pilot"
+  other_erp: "Other industry ERPs"
+  for_sector: "Products for the industry"
+  services_link: "Products:"
+  demo_text: "Hello! I would like to see a demo of {product}."
+  open_image: "Open image"
